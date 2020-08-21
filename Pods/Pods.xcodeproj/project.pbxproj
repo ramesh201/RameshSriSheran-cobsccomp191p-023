@@ -1,0 +1,1046 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06A657A1F1FC0701DCD9852AFF635478 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8816B97CE742BF0E47742D0C9C56F46A /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F4103285C617FE7E0D311738151099C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 47DC9E4C9537E1A9C98048A6614DC26A /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1105BE37541551E96CDBBFDF399EBE46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */; };
+		12BC3F230D3BFDED608180E07C3ADEDD /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 56FE7CCA9B60479EA4D1D4E33F1F72D3 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14766504393D8D9F42032514DC36E878 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D819C27534604F7D090B645346E6424 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B7F495753318F1583D62BD77CCBC688 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3044B745511954E3F63DDD0E1D3AF39C /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		340C1647362E41FD1DEB0676ADC6687D /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 806FC3437DA1C2BCCE3BAF5C4E87D280 /* AFJSONRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34FA1AC0AD1E9125B935703CC82019A5 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E52ACC43D2D6B62BE510E55E176B05 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42FC570DBA602DBA9101BD5EAFA82AD3 /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DDEE486C342FE7DF8B833CF84D2473 /* AFJSONUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59EC1DC9C09C1A1FD22831C3C0B82A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */; };
+		5D7354B769E46346858BF7FA2498A5D5 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 967D19C53C503B9DEE1B7C83FB4B5C2F /* Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F68A35FF7D8756541D3F311D9439963 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D50B93966D4B97ED850BC51CD0EEED91 /* AFXMLRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64679AC4FBD8E4B021071DD3A2568EA0 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B9D33FE0735F712883EFF51D5F06EE96 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D367A50937E1A52B81665A316CBA715 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C14CD1A748837F64207D18E03F7C53 /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FE017334AF2F26752BA5EB2C43E6850 /* Pods-NIBMCOVID19Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 780C26CD70634C04B5252A15E7A72696 /* Pods-NIBMCOVID19Tests-dummy.m */; };
+		73BF28D2E62F3ECCA3D2B556860E95C4 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 040CBA109D5599134898A527FDBEC8D5 /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		786F85DD11FCAA4D5151E133E21FD159 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9442374A46E25D1E4A6C44D6AEA062A2 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8F28EBFA59AD936C5084FCA455D56BB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4F7799189C352E1D9346617C1FCFED /* SystemConfiguration.framework */; };
+		986959E938E7DB0D90F40C30F99CE8A2 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 115C91217CE0FCAEB7F6D08D519847B6 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ADA0CFF1B295DFB3C73B1AFACE457AAC /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44BE92563C9BE8780EEB0B0D26A2B49D /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5387C5EA8C85C0886ACED8956CDBB75 /* Pods-NIBMCOVID19-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 657E63D953B63EFCC730ABD2E30A953F /* Pods-NIBMCOVID19-dummy.m */; };
+		B9A7448A94FB5ABE7EB0E7A0AABBE486 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D7EDB973F9C3C8922AEF22FA7BBA7C /* Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m */; };
+		BB384D4BC72C63543F6AFACD550C7932 /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB464A1AC8F77BEADD625449B90F /* AFNetworking-dummy.m */; };
+		BBD32EAA09A81E61CCE0AC3F9D45414E /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F2CECA4EB9280D68C48BB070640E /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C0F6991C7B34D8EA32032F4B0A6489CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */; };
+		C8890F2C8E8C0C3F59BCB347D2661C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */; };
+		CCBB6A979B6CAB4DA5F422227AE5C5FA /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C433D0199C7C456D19AD25B11249BF1 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D7D15694B6815370A86B7A45351EC926 /* Pods-NIBMCOVID19Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F84A57291A6502748E553227246FCB /* Pods-NIBMCOVID19Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCC9521DA600637D4EF5EE52015E3497 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DAFBBB2F08337FB63E4D65BA6AD028 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1088B5CBCD6B487191EA792BB807F7C /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C1075672AE69966DDC265130276EC0F /* AFImageRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E94EE2DFB83ABC53340F1F134EA18F22 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F9CC3E2F6F12AB1CB4DFC4811F75B7 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F5C90542654D2803902C2BA160695A05 /* Pods-NIBMCOVID19-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2CDFBE2EB2927CFDF052BCB68057626 /* Pods-NIBMCOVID19-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6005483432F442EBD2A7E43C194C21D /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D38C4CBC1AB486D31DD2AE7D3DD0FC9 /* AFPropertyListRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFE9F86EE18E31CD7D32FA5C1FFA4CEA /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C36397421FF7FB6F37770EDF0D7EEB8D /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		162FE37CA97112D77BD6B60CB3ADADCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+		1F0BC41B412ADC9FBF5C433935BE52C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B96A3C3899AA091780D5A7F28416459;
+			remoteInfo = "Pods-NIBMCOVID19";
+		};
+		E1E430C560C88FC31B75AC785592BF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040CBA109D5599134898A527FDBEC8D5 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
+		06F84A57291A6502748E553227246FCB /* Pods-NIBMCOVID19Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NIBMCOVID19Tests-umbrella.h"; sourceTree = "<group>"; };
+		0DCEB6AEDDDB430E71C7E8DF1C7CCCE0 /* Pods_NIBMCOVID19Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NIBMCOVID19Tests.framework; path = "Pods-NIBMCOVID19Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		115C91217CE0FCAEB7F6D08D519847B6 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = AFNetworking/AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		18266936C591458347C3EE635F79FDCC /* Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		21446A630268A7229E05F43A6D26B0E7 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-frameworks.sh"; sourceTree = "<group>"; };
+		229F6BBBAC0AACD1A8BA0020C47513C0 /* Pods-NIBMCOVID19Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19Tests-Info.plist"; sourceTree = "<group>"; };
+		277C2B05630349A5D32DD1031F45AAD5 /* Pods-NIBMCOVID19-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NIBMCOVID19-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C433D0199C7C456D19AD25B11249BF1 /* AFHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFHTTPClient.m; sourceTree = "<group>"; };
+		2D819C27534604F7D090B645346E6424 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		3044B745511954E3F63DDD0E1D3AF39C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		324DBB5BB5A9A1E0CBC34ED5D339CEED /* Pods-NIBMCOVID19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19.debug.xcconfig"; sourceTree = "<group>"; };
+		424B45A1FBDC69BC1681D074C22B20F7 /* Pods-NIBMCOVID19Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		44BE92563C9BE8780EEB0B0D26A2B49D /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		4786349E66B1DDEF5C920C4F5625D7E5 /* Pods_NIBMCOVID19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NIBMCOVID19.framework; path = "Pods-NIBMCOVID19.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DB8A71667191400152D85E8E93879C /* Pods-NIBMCOVID19-NIBMCOVID19UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests.modulemap"; sourceTree = "<group>"; };
+		47DC9E4C9537E1A9C98048A6614DC26A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		4A10EB464A1AC8F77BEADD625449B90F /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		4D1A0BEE95CA42D326C1EB5D176DE2F1 /* Pods-NIBMCOVID19-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NIBMCOVID19-frameworks.sh"; sourceTree = "<group>"; };
+		56FE7CCA9B60479EA4D1D4E33F1F72D3 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		57867FECB82E0E9834B692527E55AC6B /* AFNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AFNetworking-Info.plist"; sourceTree = "<group>"; };
+		657E63D953B63EFCC730ABD2E30A953F /* Pods-NIBMCOVID19-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NIBMCOVID19-dummy.m"; sourceTree = "<group>"; };
+		6F5197AAC9B3D0BE8E55B51C44783AB3 /* Pods-NIBMCOVID19Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7302AAC061B3FF8A063D528FF47CF47B /* AFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.release.xcconfig; sourceTree = "<group>"; };
+		74A158FB34190CF4AF184F7BC0AF7E2F /* Pods-NIBMCOVID19.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NIBMCOVID19.modulemap"; sourceTree = "<group>"; };
+		780C26CD70634C04B5252A15E7A72696 /* Pods-NIBMCOVID19Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NIBMCOVID19Tests-dummy.m"; sourceTree = "<group>"; };
+		7D38C4CBC1AB486D31DD2AE7D3DD0FC9 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = AFNetworking/AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		806FC3437DA1C2BCCE3BAF5C4E87D280 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = AFNetworking/AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		817C7D95D28A56183C9C328784259831 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AFNetworking.modulemap; sourceTree = "<group>"; };
+		838DC88245BEDA02342298895353D1F6 /* Pods-NIBMCOVID19-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19-acknowledgements.plist"; sourceTree = "<group>"; };
+		84CB4824A2642E6D9523BCB4B0F97515 /* Pods-NIBMCOVID19Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NIBMCOVID19Tests.modulemap"; sourceTree = "<group>"; };
+		84F9CC3E2F6F12AB1CB4DFC4811F75B7 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = AFNetworking/AFImageRequestOperation.m; sourceTree = "<group>"; };
+		86394ECA918216FDA23EC3E104A4ECDD /* AFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.debug.xcconfig; sourceTree = "<group>"; };
+		8816B97CE742BF0E47742D0C9C56F46A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8C1075672AE69966DDC265130276EC0F /* AFImageRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = AFNetworking/AFImageRequestOperation.h; sourceTree = "<group>"; };
+		93C14CD1A748837F64207D18E03F7C53 /* AFHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFHTTPClient.h; sourceTree = "<group>"; };
+		93F9FBE8AE8B1F0F640CF1AB24D0DE41 /* Pods-NIBMCOVID19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19.release.xcconfig"; sourceTree = "<group>"; };
+		9442374A46E25D1E4A6C44D6AEA062A2 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		967D19C53C503B9DEE1B7C83FB4B5C2F /* Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h"; sourceTree = "<group>"; };
+		979E68D1095CBB684D3435391D6F6C42 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9CC2F2CECA4EB9280D68C48BB070640E /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2CDFBE2EB2927CFDF052BCB68057626 /* Pods-NIBMCOVID19-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NIBMCOVID19-umbrella.h"; sourceTree = "<group>"; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFNetworking.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A753D28E62C42D17602AA388A3681038 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A8DDEE486C342FE7DF8B833CF84D2473 /* AFJSONUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFJSONUtilities.h; path = AFNetworking/AFJSONUtilities.h; sourceTree = "<group>"; };
+		B2DAFBBB2F08337FB63E4D65BA6AD028 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = AFNetworking/AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		B7B3607FFE70E02B33704B6842EB9F50 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8A2BC20FE2AA7262FB95A00EA5DBC1E /* Pods_NIBMCOVID19_NIBMCOVID19UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NIBMCOVID19_NIBMCOVID19UITests.framework; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D33FE0735F712883EFF51D5F06EE96 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		C3333BC1EE2B703ED4330E389D5B7096 /* Pods-NIBMCOVID19-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19-Info.plist"; sourceTree = "<group>"; };
+		C36397421FF7FB6F37770EDF0D7EEB8D /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = AFNetworking/AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		CC7E1DCC577FBCB3F61AA74F22FDF6FF /* Pods-NIBMCOVID19Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NIBMCOVID19Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CE4F7799189C352E1D9346617C1FCFED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		D3D7EDB973F9C3C8922AEF22FA7BBA7C /* Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m"; sourceTree = "<group>"; };
+		D4E52ACC43D2D6B62BE510E55E176B05 /* AFJSONUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFJSONUtilities.m; path = AFNetworking/AFJSONUtilities.m; sourceTree = "<group>"; };
+		D50B93966D4B97ED850BC51CD0EEED91 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = AFNetworking/AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DEEA1CC0237E2879FB1296A0EA11D5FB /* Pods-NIBMCOVID19-NIBMCOVID19UITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NIBMCOVID19-NIBMCOVID19UITests-Info.plist"; sourceTree = "<group>"; };
+		E8FADA525BFD6F89F9524D8162E6DC25 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		FCCFF907CC8B6896434742D509F1F284 /* Pods-NIBMCOVID19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NIBMCOVID19Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5207DA4A557960EDB489266EAF1F3462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8890F2C8E8C0C3F59BCB347D2661C75 /* Foundation.framework in Frameworks */,
+				8F28EBFA59AD936C5084FCA455D56BB2 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73D8324F3A02D38787D82DF0BB7242CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1105BE37541551E96CDBBFDF399EBE46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC69BF4483B0D6323EAFCBD63C6D32C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EC1DC9C09C1A1FD22831C3C0B82A79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE98B1F845AD2010930B545FA06EDC53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0F6991C7B34D8EA32032F4B0A6489CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0090E59CBEDEFC16787196656A9C4D70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				772CF1FCBD51CAEC55C32FC169A46107 /* AFNetworking */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB7EBF6CCCA535BA4F447E10039CEA16 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2956C4F46E8512B34E035DB551E2A5FD /* Pods-NIBMCOVID19-NIBMCOVID19UITests */ = {
+			isa = PBXGroup;
+			children = (
+				47DB8A71667191400152D85E8E93879C /* Pods-NIBMCOVID19-NIBMCOVID19UITests.modulemap */,
+				18266936C591458347C3EE635F79FDCC /* Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.markdown */,
+				979E68D1095CBB684D3435391D6F6C42 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-acknowledgements.plist */,
+				D3D7EDB973F9C3C8922AEF22FA7BBA7C /* Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m */,
+				21446A630268A7229E05F43A6D26B0E7 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-frameworks.sh */,
+				DEEA1CC0237E2879FB1296A0EA11D5FB /* Pods-NIBMCOVID19-NIBMCOVID19UITests-Info.plist */,
+				967D19C53C503B9DEE1B7C83FB4B5C2F /* Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h */,
+				A753D28E62C42D17602AA388A3681038 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.debug.xcconfig */,
+				B7B3607FFE70E02B33704B6842EB9F50 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.release.xcconfig */,
+			);
+			name = "Pods-NIBMCOVID19-NIBMCOVID19UITests";
+			path = "Target Support Files/Pods-NIBMCOVID19-NIBMCOVID19UITests";
+			sourceTree = "<group>";
+		};
+		62FD6451BCF554AE928181E385F34791 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89336A24DFF34C19B85E6E816ECA754C /* Pods-NIBMCOVID19 */,
+				2956C4F46E8512B34E035DB551E2A5FD /* Pods-NIBMCOVID19-NIBMCOVID19UITests */,
+				C6B95E9804B56AD5296A5F374F2D218E /* Pods-NIBMCOVID19Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		772CF1FCBD51CAEC55C32FC169A46107 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				93C14CD1A748837F64207D18E03F7C53 /* AFHTTPClient.h */,
+				2C433D0199C7C456D19AD25B11249BF1 /* AFHTTPClient.m */,
+				2D819C27534604F7D090B645346E6424 /* AFHTTPRequestOperation.h */,
+				8816B97CE742BF0E47742D0C9C56F46A /* AFHTTPRequestOperation.m */,
+				8C1075672AE69966DDC265130276EC0F /* AFImageRequestOperation.h */,
+				84F9CC3E2F6F12AB1CB4DFC4811F75B7 /* AFImageRequestOperation.m */,
+				806FC3437DA1C2BCCE3BAF5C4E87D280 /* AFJSONRequestOperation.h */,
+				115C91217CE0FCAEB7F6D08D519847B6 /* AFJSONRequestOperation.m */,
+				A8DDEE486C342FE7DF8B833CF84D2473 /* AFJSONUtilities.h */,
+				D4E52ACC43D2D6B62BE510E55E176B05 /* AFJSONUtilities.m */,
+				56FE7CCA9B60479EA4D1D4E33F1F72D3 /* AFNetworkActivityIndicatorManager.h */,
+				9CC2F2CECA4EB9280D68C48BB070640E /* AFNetworkActivityIndicatorManager.m */,
+				B9D33FE0735F712883EFF51D5F06EE96 /* AFNetworking.h */,
+				7D38C4CBC1AB486D31DD2AE7D3DD0FC9 /* AFPropertyListRequestOperation.h */,
+				B2DAFBBB2F08337FB63E4D65BA6AD028 /* AFPropertyListRequestOperation.m */,
+				44BE92563C9BE8780EEB0B0D26A2B49D /* AFURLConnectionOperation.h */,
+				9442374A46E25D1E4A6C44D6AEA062A2 /* AFURLConnectionOperation.m */,
+				D50B93966D4B97ED850BC51CD0EEED91 /* AFXMLRequestOperation.h */,
+				C36397421FF7FB6F37770EDF0D7EEB8D /* AFXMLRequestOperation.m */,
+				47DC9E4C9537E1A9C98048A6614DC26A /* UIImageView+AFNetworking.h */,
+				3044B745511954E3F63DDD0E1D3AF39C /* UIImageView+AFNetworking.m */,
+				CC7D1C792CC731858C85300AA592A71B /* Support Files */,
+			);
+			name = AFNetworking;
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		89336A24DFF34C19B85E6E816ECA754C /* Pods-NIBMCOVID19 */ = {
+			isa = PBXGroup;
+			children = (
+				74A158FB34190CF4AF184F7BC0AF7E2F /* Pods-NIBMCOVID19.modulemap */,
+				277C2B05630349A5D32DD1031F45AAD5 /* Pods-NIBMCOVID19-acknowledgements.markdown */,
+				838DC88245BEDA02342298895353D1F6 /* Pods-NIBMCOVID19-acknowledgements.plist */,
+				657E63D953B63EFCC730ABD2E30A953F /* Pods-NIBMCOVID19-dummy.m */,
+				4D1A0BEE95CA42D326C1EB5D176DE2F1 /* Pods-NIBMCOVID19-frameworks.sh */,
+				C3333BC1EE2B703ED4330E389D5B7096 /* Pods-NIBMCOVID19-Info.plist */,
+				A2CDFBE2EB2927CFDF052BCB68057626 /* Pods-NIBMCOVID19-umbrella.h */,
+				324DBB5BB5A9A1E0CBC34ED5D339CEED /* Pods-NIBMCOVID19.debug.xcconfig */,
+				93F9FBE8AE8B1F0F640CF1AB24D0DE41 /* Pods-NIBMCOVID19.release.xcconfig */,
+			);
+			name = "Pods-NIBMCOVID19";
+			path = "Target Support Files/Pods-NIBMCOVID19";
+			sourceTree = "<group>";
+		};
+		C6B95E9804B56AD5296A5F374F2D218E /* Pods-NIBMCOVID19Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84CB4824A2642E6D9523BCB4B0F97515 /* Pods-NIBMCOVID19Tests.modulemap */,
+				CC7E1DCC577FBCB3F61AA74F22FDF6FF /* Pods-NIBMCOVID19Tests-acknowledgements.markdown */,
+				424B45A1FBDC69BC1681D074C22B20F7 /* Pods-NIBMCOVID19Tests-acknowledgements.plist */,
+				780C26CD70634C04B5252A15E7A72696 /* Pods-NIBMCOVID19Tests-dummy.m */,
+				229F6BBBAC0AACD1A8BA0020C47513C0 /* Pods-NIBMCOVID19Tests-Info.plist */,
+				06F84A57291A6502748E553227246FCB /* Pods-NIBMCOVID19Tests-umbrella.h */,
+				FCCFF907CC8B6896434742D509F1F284 /* Pods-NIBMCOVID19Tests.debug.xcconfig */,
+				6F5197AAC9B3D0BE8E55B51C44783AB3 /* Pods-NIBMCOVID19Tests.release.xcconfig */,
+			);
+			name = "Pods-NIBMCOVID19Tests";
+			path = "Target Support Files/Pods-NIBMCOVID19Tests";
+			sourceTree = "<group>";
+		};
+		CC7D1C792CC731858C85300AA592A71B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				817C7D95D28A56183C9C328784259831 /* AFNetworking.modulemap */,
+				4A10EB464A1AC8F77BEADD625449B90F /* AFNetworking-dummy.m */,
+				57867FECB82E0E9834B692527E55AC6B /* AFNetworking-Info.plist */,
+				E8FADA525BFD6F89F9524D8162E6DC25 /* AFNetworking-prefix.pch */,
+				040CBA109D5599134898A527FDBEC8D5 /* AFNetworking-umbrella.h */,
+				86394ECA918216FDA23EC3E104A4ECDD /* AFNetworking.debug.xcconfig */,
+				7302AAC061B3FF8A063D528FF47CF47B /* AFNetworking.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				0090E59CBEDEFC16787196656A9C4D70 /* Pods */,
+				D8DE22B473E314E28E3DAD2B33D08CB0 /* Products */,
+				62FD6451BCF554AE928181E385F34791 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D8DE22B473E314E28E3DAD2B33D08CB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */,
+				4786349E66B1DDEF5C920C4F5625D7E5 /* Pods_NIBMCOVID19.framework */,
+				B8A2BC20FE2AA7262FB95A00EA5DBC1E /* Pods_NIBMCOVID19_NIBMCOVID19UITests.framework */,
+				0DCEB6AEDDDB430E71C7E8DF1C7CCCE0 /* Pods_NIBMCOVID19Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB7EBF6CCCA535BA4F447E10039CEA16 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1DE354DA182454A49972F1EA0BAB0B3E /* Foundation.framework */,
+				CE4F7799189C352E1D9346617C1FCFED /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		410AA0EBC5DDA086D4BBE3BA95E891C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D15694B6815370A86B7A45351EC926 /* Pods-NIBMCOVID19Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46C170A9EBF430FAAE9E94DCDE37F9F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D367A50937E1A52B81665A316CBA715 /* AFHTTPClient.h in Headers */,
+				14766504393D8D9F42032514DC36E878 /* AFHTTPRequestOperation.h in Headers */,
+				E1088B5CBCD6B487191EA792BB807F7C /* AFImageRequestOperation.h in Headers */,
+				340C1647362E41FD1DEB0676ADC6687D /* AFJSONRequestOperation.h in Headers */,
+				42FC570DBA602DBA9101BD5EAFA82AD3 /* AFJSONUtilities.h in Headers */,
+				12BC3F230D3BFDED608180E07C3ADEDD /* AFNetworkActivityIndicatorManager.h in Headers */,
+				73BF28D2E62F3ECCA3D2B556860E95C4 /* AFNetworking-umbrella.h in Headers */,
+				64679AC4FBD8E4B021071DD3A2568EA0 /* AFNetworking.h in Headers */,
+				F6005483432F442EBD2A7E43C194C21D /* AFPropertyListRequestOperation.h in Headers */,
+				ADA0CFF1B295DFB3C73B1AFACE457AAC /* AFURLConnectionOperation.h in Headers */,
+				5F68A35FF7D8756541D3F311D9439963 /* AFXMLRequestOperation.h in Headers */,
+				0F4103285C617FE7E0D311738151099C /* UIImageView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0CB7FCA5329D078D6F5AF0C54522D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C90542654D2803902C2BA160695A05 /* Pods-NIBMCOVID19-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		717A87AE49E5E001D73D0E08FD93536D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D7354B769E46346858BF7FA2498A5D5 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DBA2D10F4B076522951A07B8D34EE28 /* Build configuration list for PBXNativeTarget "AFNetworking" */;
+			buildPhases = (
+				46C170A9EBF430FAAE9E94DCDE37F9F1 /* Headers */,
+				6735659E853FB0A0B06EA57A1BD5D679 /* Sources */,
+				5207DA4A557960EDB489266EAF1F3462 /* Frameworks */,
+				FBAEBAE975B2259319EE15A1D6643C39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		18DC9190B0DF2FEE109F2418E99CAE43 /* Pods-NIBMCOVID19-NIBMCOVID19UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29E26E5E3C0CDCDB18DD7156EE1BA15B /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19-NIBMCOVID19UITests" */;
+			buildPhases = (
+				717A87AE49E5E001D73D0E08FD93536D /* Headers */,
+				A6290E02CE59904A975B409BBF240534 /* Sources */,
+				73D8324F3A02D38787D82DF0BB7242CE /* Frameworks */,
+				FD049B2D6581D1574CFACC5D946AB3B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AF6296558EDF30E71D4DE817AF149B /* PBXTargetDependency */,
+			);
+			name = "Pods-NIBMCOVID19-NIBMCOVID19UITests";
+			productName = "Pods-NIBMCOVID19-NIBMCOVID19UITests";
+			productReference = B8A2BC20FE2AA7262FB95A00EA5DBC1E /* Pods_NIBMCOVID19_NIBMCOVID19UITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1DA5FD4099FCDFEC65A12E03976C383A /* Pods-NIBMCOVID19Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 870C1BA0B7B679C20CA023F2DD5594F4 /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19Tests" */;
+			buildPhases = (
+				410AA0EBC5DDA086D4BBE3BA95E891C2 /* Headers */,
+				33AA3438C6F63C3AEA7B82069DE0A1B5 /* Sources */,
+				FC69BF4483B0D6323EAFCBD63C6D32C9 /* Frameworks */,
+				8B6C03BFEC8F82E984ADB36AA09200BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				119516F3A50C43A54E4589A7938E5CDB /* PBXTargetDependency */,
+			);
+			name = "Pods-NIBMCOVID19Tests";
+			productName = "Pods-NIBMCOVID19Tests";
+			productReference = 0DCEB6AEDDDB430E71C7E8DF1C7CCCE0 /* Pods_NIBMCOVID19Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B96A3C3899AA091780D5A7F28416459 /* Pods-NIBMCOVID19 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFDFE959DB3718E52F323418E4C04D43 /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19" */;
+			buildPhases = (
+				5D0CB7FCA5329D078D6F5AF0C54522D4 /* Headers */,
+				DEE9C8127E973EC2A9779075DB712662 /* Sources */,
+				FE98B1F845AD2010930B545FA06EDC53 /* Frameworks */,
+				7224F33BBFEB66C1E4310ED7FC7E0F0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC9E6C418A391F5055CC527CFD35C4EF /* PBXTargetDependency */,
+			);
+			name = "Pods-NIBMCOVID19";
+			productName = "Pods-NIBMCOVID19";
+			productReference = 4786349E66B1DDEF5C920C4F5625D7E5 /* Pods_NIBMCOVID19.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D8DE22B473E314E28E3DAD2B33D08CB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */,
+				7B96A3C3899AA091780D5A7F28416459 /* Pods-NIBMCOVID19 */,
+				18DC9190B0DF2FEE109F2418E99CAE43 /* Pods-NIBMCOVID19-NIBMCOVID19UITests */,
+				1DA5FD4099FCDFEC65A12E03976C383A /* Pods-NIBMCOVID19Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7224F33BBFEB66C1E4310ED7FC7E0F0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6C03BFEC8F82E984ADB36AA09200BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAEBAE975B2259319EE15A1D6643C39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD049B2D6581D1574CFACC5D946AB3B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33AA3438C6F63C3AEA7B82069DE0A1B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FE017334AF2F26752BA5EB2C43E6850 /* Pods-NIBMCOVID19Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6735659E853FB0A0B06EA57A1BD5D679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCBB6A979B6CAB4DA5F422227AE5C5FA /* AFHTTPClient.m in Sources */,
+				06A657A1F1FC0701DCD9852AFF635478 /* AFHTTPRequestOperation.m in Sources */,
+				E94EE2DFB83ABC53340F1F134EA18F22 /* AFImageRequestOperation.m in Sources */,
+				986959E938E7DB0D90F40C30F99CE8A2 /* AFJSONRequestOperation.m in Sources */,
+				34FA1AC0AD1E9125B935703CC82019A5 /* AFJSONUtilities.m in Sources */,
+				BBD32EAA09A81E61CCE0AC3F9D45414E /* AFNetworkActivityIndicatorManager.m in Sources */,
+				BB384D4BC72C63543F6AFACD550C7932 /* AFNetworking-dummy.m in Sources */,
+				DCC9521DA600637D4EF5EE52015E3497 /* AFPropertyListRequestOperation.m in Sources */,
+				786F85DD11FCAA4D5151E133E21FD159 /* AFURLConnectionOperation.m in Sources */,
+				FFE9F86EE18E31CD7D32FA5C1FFA4CEA /* AFXMLRequestOperation.m in Sources */,
+				2B7F495753318F1583D62BD77CCBC688 /* UIImageView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6290E02CE59904A975B409BBF240534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A7448A94FB5ABE7EB0E7A0AABBE486 /* Pods-NIBMCOVID19-NIBMCOVID19UITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE9C8127E973EC2A9779075DB712662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5387C5EA8C85C0886ACED8956CDBB75 /* Pods-NIBMCOVID19-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		119516F3A50C43A54E4589A7938E5CDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NIBMCOVID19";
+			target = 7B96A3C3899AA091780D5A7F28416459 /* Pods-NIBMCOVID19 */;
+			targetProxy = 1F0BC41B412ADC9FBF5C433935BE52C9 /* PBXContainerItemProxy */;
+		};
+		DC9E6C418A391F5055CC527CFD35C4EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = E1E430C560C88FC31B75AC785592BF34 /* PBXContainerItemProxy */;
+		};
+		F4AF6296558EDF30E71D4DE817AF149B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 162FE37CA97112D77BD6B60CB3ADADCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		46D39158B6BAAEF1DDD09E46E839ED4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F5197AAC9B3D0BE8E55B51C44783AB3 /* Pods-NIBMCOVID19Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19Tests/Pods-NIBMCOVID19Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19Tests/Pods-NIBMCOVID19Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5EC4FEA002DBB3FBB5A873DB223D01DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCCFF907CC8B6896434742D509F1F284 /* Pods-NIBMCOVID19Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19Tests/Pods-NIBMCOVID19Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19Tests/Pods-NIBMCOVID19Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		771F2D518929D550A47B5977B93A25D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86394ECA918216FDA23EC3E104A4ECDD /* AFNetworking.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DB0EEF8C8BE94E6201DECB6A3917652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F9FBE8AE8B1F0F640CF1AB24D0DE41 /* Pods-NIBMCOVID19.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19/Pods-NIBMCOVID19-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19/Pods-NIBMCOVID19.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AB990A3C076BB5F8C97B39B8952A5298 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7B3607FFE70E02B33704B6842EB9F50 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19-NIBMCOVID19UITests/Pods-NIBMCOVID19-NIBMCOVID19UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19-NIBMCOVID19UITests/Pods-NIBMCOVID19-NIBMCOVID19UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9892E389FCFF0342CF27560DA91ACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A753D28E62C42D17602AA388A3681038 /* Pods-NIBMCOVID19-NIBMCOVID19UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19-NIBMCOVID19UITests/Pods-NIBMCOVID19-NIBMCOVID19UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19-NIBMCOVID19UITests/Pods-NIBMCOVID19-NIBMCOVID19UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7A51AB15AC7B89E797F49D910510991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324DBB5BB5A9A1E0CBC34ED5D339CEED /* Pods-NIBMCOVID19.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NIBMCOVID19/Pods-NIBMCOVID19-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NIBMCOVID19/Pods-NIBMCOVID19.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC08DB6F8D13114CC968F0311377E66D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7302AAC061B3FF8A063D528FF47CF47B /* AFNetworking.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AFNetworking/AFNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AFNetworking;
+				PRODUCT_NAME = AFNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29E26E5E3C0CDCDB18DD7156EE1BA15B /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19-NIBMCOVID19UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9892E389FCFF0342CF27560DA91ACE2 /* Debug */,
+				AB990A3C076BB5F8C97B39B8952A5298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DBA2D10F4B076522951A07B8D34EE28 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				771F2D518929D550A47B5977B93A25D6 /* Debug */,
+				FC08DB6F8D13114CC968F0311377E66D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		870C1BA0B7B679C20CA023F2DD5594F4 /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EC4FEA002DBB3FBB5A873DB223D01DF /* Debug */,
+				46D39158B6BAAEF1DDD09E46E839ED4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFDFE959DB3718E52F323418E4C04D43 /* Build configuration list for PBXNativeTarget "Pods-NIBMCOVID19" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7A51AB15AC7B89E797F49D910510991 /* Debug */,
+				8DB0EEF8C8BE94E6201DECB6A3917652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
