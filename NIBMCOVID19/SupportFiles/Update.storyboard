@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hh2-jT-3El">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wtN-Xp-cda">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Authentication-->
+        <scene sceneID="hSI-qc-poq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Authentication" id="Lrn-up-lDn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2eA-ww-hzK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZQ-uN-gNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="199"/>
+        </scene>
+        <!--Update View Controller-->
         <scene sceneID="IRa-1b-an4">
             <objects>
-                <viewController id="hh2-jT-3El" sceneMemberID="viewController">
+                <viewController id="hh2-jT-3El" customClass="UpdateViewController" customModule="NIBMCOVID19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bFi-5c-wqi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zqm-ox-ifR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="dkV-Vc-gYU"/>
+                    <navigationItem key="navigationItem" id="elJ-dl-r7s"/>
+                    <connections>
+                        <segue destination="Lrn-up-lDn" kind="presentation" identifier="showAuthentication" modalPresentationStyle="fullScreen" id="dVy-Un-dv5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCk-Hd-Zlr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687" y="492"/>
+            <point key="canvasLocation" x="-31.884057971014496" y="580.58035714285711"/>
+        </scene>
+        <!--Update-->
+        <scene sceneID="qRw-Zj-mUY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSu-YM-rmp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wtN-Xp-cda" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Update" image="plus" catalog="system" id="dkV-Vc-gYU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wxz-b7-aaJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hh2-jT-3El" kind="relationship" relationship="rootViewController" id="lfZ-Jc-09H"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-942.02898550724649" y="580.58035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
