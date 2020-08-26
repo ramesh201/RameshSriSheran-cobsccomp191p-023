@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		101A787924F284250080845F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787824F284250080845F /* Extensions.swift */; };
 		101A787B24F284B50080845F /* AuthButtonUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787A24F284B50080845F /* AuthButtonUIButton.swift */; };
 		101A787D24F2933D0080845F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787C24F2933D0080845F /* CustomTableViewCell.swift */; };
+		101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A788024F359510080845F /* GeofencingCtrlViewController.swift */; };
 		108381C124ED89F900B6E89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108381C024ED89F900B6E89D /* Main.storyboard */; };
 		108381CC24ED90FF00B6E89D /* coronavirus_logo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */; };
 		108381D124EEC70900B6E89D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108381D024EEC70900B6E89D /* SettingViewController.swift */; };
@@ -47,7 +48,7 @@
 		1083822C24F2446A00B6E89D /* ShareAppItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1083822B24F2446A00B6E89D /* ShareAppItem.storyboard */; };
 		1083822E24F2448200B6E89D /* SurveyResultItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1083822D24F2448200B6E89D /* SurveyResultItem.storyboard */; };
 		1083823024F2449D00B6E89D /* UserProfileItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1083822F24F2449D00B6E89D /* UserProfileItem.storyboard */; };
-		1083823224F253EB00B6E89D /* Geofencing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1083823124F253EB00B6E89D /* Geofencing.storyboard */; };
+		1083823224F253EB00B6E89D /* GeofencingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1083823124F253EB00B6E89D /* GeofencingView.storyboard */; };
 		1083823524F27BA100B6E89D /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823424F27BA100B6E89D /* UserLocation.swift */; };
 		1083823724F27BB900B6E89D /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823624F27BB900B6E89D /* UserRole.swift */; };
 		1083823924F27BF300B6E89D /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823824F27BF300B6E89D /* UserDetail.swift */; };
@@ -93,6 +94,7 @@
 		101A787824F284250080845F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		101A787A24F284B50080845F /* AuthButtonUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonUIButton.swift; sourceTree = "<group>"; };
 		101A787C24F2933D0080845F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		101A788024F359510080845F /* GeofencingCtrlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingCtrlViewController.swift; sourceTree = "<group>"; };
 		108381C024ED89F900B6E89D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coronavirus_logo-2.jpg"; path = "../../../../Downloads/coronavirus_logo-2.jpg"; sourceTree = "<group>"; };
 		108381D024EEC70900B6E89D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 		1083822B24F2446A00B6E89D /* ShareAppItem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShareAppItem.storyboard; sourceTree = "<group>"; };
 		1083822D24F2448200B6E89D /* SurveyResultItem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurveyResultItem.storyboard; sourceTree = "<group>"; };
 		1083822F24F2449D00B6E89D /* UserProfileItem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfileItem.storyboard; sourceTree = "<group>"; };
-		1083823124F253EB00B6E89D /* Geofencing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Geofencing.storyboard; sourceTree = "<group>"; };
+		1083823124F253EB00B6E89D /* GeofencingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeofencingView.storyboard; sourceTree = "<group>"; };
 		1083823424F27BA100B6E89D /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		1083823624F27BB900B6E89D /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		1083823824F27BF300B6E89D /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
@@ -225,7 +227,7 @@
 				1083821924F2340F00B6E89D /* ShareApp.storyboard */,
 				1083821B24F234A100B6E89D /* SurveyResults.storyboard */,
 				1083821D24F234EE00B6E89D /* UserProfile.storyboard */,
-				1083823124F253EB00B6E89D /* Geofencing.storyboard */,
+				1083823124F253EB00B6E89D /* GeofencingView.storyboard */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -295,6 +297,7 @@
 				10C90DE024ED77D900B2FB43 /* SecondViewController.swift */,
 				108381FF24F0B61A00B6E89D /* ViewController.swift */,
 				108381D024EEC70900B6E89D /* SettingViewController.swift */,
+				101A788024F359510080845F /* GeofencingCtrlViewController.swift */,
 				108381CD24EEC63C00B6E89D /* SupportFiles */,
 				10C90DED24ED77D900B2FB43 /* Info.plist */,
 				108381FD24F0AED000B6E89D /* GoogleService-Info.plist */,
@@ -439,7 +442,7 @@
 				};
 			};
 			buildConfigurationList = 10C90DD224ED77D900B2FB43 /* Build configuration list for PBXProject "NIBMCOVID19" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -487,7 +490,7 @@
 				1083820424F0D7D900B6E89D /* LoginView.storyboard in Resources */,
 				1083821E24F234EE00B6E89D /* UserProfile.storyboard in Resources */,
 				1083821824F2334600B6E89D /* ContactUs.storyboard in Resources */,
-				1083823224F253EB00B6E89D /* Geofencing.storyboard in Resources */,
+				1083823224F253EB00B6E89D /* GeofencingView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +627,7 @@
 				1083822224F239FE00B6E89D /* ShareAppViewController.swift in Sources */,
 				10C90DDF24ED77D900B2FB43 /* FirstViewController.swift in Sources */,
 				1083823524F27BA100B6E89D /* UserLocation.swift in Sources */,
+				101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */,
 				1083823924F27BF300B6E89D /* UserDetail.swift in Sources */,
 				1083822424F23A2D00B6E89D /* SurveyResultViewController.swift in Sources */,
 				10C90DE724ED77D900B2FB43 /* NIBMCOVID19.xcdatamodeld in Sources */,

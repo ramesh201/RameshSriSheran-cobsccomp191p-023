@@ -119,7 +119,7 @@ extension UIView {
 }
 
 extension UITextField {
-    func textField(withPlaceholder placeholder: String, isSecureTextEntry: Bool) -> UITextField {
+    func textField(withPlaceholder placeholder: String, isSecureTextEntry: Bool,image: UIImage) -> UITextField {
         let tf = UITextField()
         tf.borderStyle = .none
         tf.font = UIFont.systemFont(ofSize: 16)
@@ -127,8 +127,27 @@ extension UITextField {
         tf.keyboardAppearance = .dark
         tf.isSecureTextEntry = isSecureTextEntry
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        
+        let iconView = UIImageView(frame: CGRect(x: 10, y: 10, width: 25, height: 25)) // set your Own size
+        iconView.image = image
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 45))
+        iconContainerView.addSubview(iconView)
+        tf.leftView = iconContainerView
+        tf.leftViewMode = .always
+        self.tintColor = .lightGray
         return tf
     }
+    
+    func setLeftView(image: UIImage) {
+      let iconView = UIImageView(frame: CGRect(x: 10, y: 10, width: 25, height: 25)) // set your Own size
+      iconView.image = image
+      let iconContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 45))
+      iconContainerView.addSubview(iconView)
+      leftView = iconContainerView
+      leftViewMode = .always
+      self.tintColor = .lightGray
+    }
+    
 }
 
 extension MKPlacemark {

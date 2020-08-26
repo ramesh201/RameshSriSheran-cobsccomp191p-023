@@ -78,15 +78,15 @@ class SignupViewController: UIViewController {
     }()
     
     private let emailTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
+        return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
     }()
     
     private let fullNameTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false)
+        return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
     }()
     
     private let passwordTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+        return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
     }()
     
     private let accountTypeSegmentedControl: UISegmentedControl = {
