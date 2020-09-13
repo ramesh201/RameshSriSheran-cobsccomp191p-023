@@ -30,7 +30,7 @@ struct Service {
         }
     }
     
-    func fetchDriversLocation(location: CLLocation, completion: @escaping(User) -> Void) {
+    /*func fetchDriversLocation(location: CLLocation, completion: @escaping(User) -> Void) {
         let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
         
         REF_DRIVER_LOCATIONS.observe(.value) { (snapshot) in
@@ -42,7 +42,7 @@ struct Service {
                 }
             })
         }
-    }
+    }*/
     
     func uploadTrip(_ pickupCoordinates: CLLocationCoordinate2D, _ destinationCoordinates: CLLocationCoordinate2D, completion: @escaping(Error?, DatabaseReference) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }

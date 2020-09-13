@@ -8,25 +8,26 @@
 
 import CoreLocation
 
-enum AccountType: Int {
-    case passenger
-    case driver
+enum RoleType: Int {
+    case nonAcademic
+    case student
+    case academic
 }
 
 struct User {
-    let fullName: String
-    let email: String
-    var accountType: AccountType!
-    var location: CLLocation?
-    let uid: String
+    let userFullName: String
+    let userEmail: String
+    var roleType: RoleType!
+    var userLocation: CLLocation?
+    let userId: String
     
     init(uid: String, dictionary: [String: Any]) {
-        self.uid = uid
-        self.fullName = dictionary["fullName"] as? String ?? ""
-        self.email = dictionary["email"] as? String ?? ""
+        self.userId = uid
+        self.userFullName = dictionary["userFullName"] as? String ?? ""
+        self.userEmail = dictionary["userEmail"] as? String ?? ""
         
-        if let index = dictionary["accountType"] as? Int {
-            self.accountType = AccountType(rawValue: index)
+        if let index = dictionary["roleType"] as? Int {
+            self.roleType = RoleType(rawValue: index)
         }
     }
 }

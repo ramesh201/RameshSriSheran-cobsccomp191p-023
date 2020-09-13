@@ -191,8 +191,8 @@ class SignupViewController: UIViewController {
     
     // MARK: - Helper Function
     
-    func uploadUserDataAndShowHomeController(uid: String, values: [String: Any]) {
-        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+    func uploadUserDataAndShowHomeController(userId: String, userObj: [String: Any]) {
+        REF_USERS.child(userId).updateChildValues(userObj) { (error, ref) in
             
             //handle error
             
@@ -238,7 +238,7 @@ class SignupViewController: UIViewController {
         guard let email = emailTextFiled.text else { return }
         guard let password = passwordTextFiled.text else { return }
         guard let fullName = fullNameTextFiled.text else { return }
-        let accountType = accountTypeSegmentedControl.selectedSegmentIndex
+        let roleType = accountTypeSegmentedControl.selectedSegmentIndex
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
@@ -246,25 +246,25 @@ class SignupViewController: UIViewController {
                 return
             }
             
-            guard let uid = result?.user.uid else { return }
+            guard let userId = result?.user.uid else { return }
             
-            let values = [
-            "email": email,
-            "fullName": fullName,
-            "accountType": accountType
+            let userObj = [
+            "userEmail": email,
+            "userFullName": fullName,
+            "roleType": roleType
             ] as [String : Any]
             
-            if accountType == 1 {
+            if roleType == 1 {
                 let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
                 
                 guard let location = self.location else { return }
                 
-                geoFire.setLocation(location, forKey: uid, withCompletionBlock: { (error) in
-                    self.uploadUserDataAndShowHomeController(uid: uid, values: values)
+                geoFire.setLocation(location, forKey: userId, withCompletionBlock: { (error) in
+                    self.uploadUserDataAndShowHomeController(userId: userId, userObj: userObj)
                 })
             }
             
-            self.uploadUserDataAndShowHomeController(uid: uid, values: values)
+            self.uploadUserDataAndShowHomeController(userId: userId, userObj: userObj)
         }
     }
     

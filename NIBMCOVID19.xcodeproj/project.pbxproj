@@ -16,11 +16,14 @@
 		101A787B24F284B50080845F /* AuthButtonUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787A24F284B50080845F /* AuthButtonUIButton.swift */; };
 		101A787D24F2933D0080845F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787C24F2933D0080845F /* CustomTableViewCell.swift */; };
 		101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A788024F359510080845F /* GeofencingCtrlViewController.swift */; };
+		101F3ED5250E7F5F00B8B9B5 /* Handwashing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 101F3ECF250E7F5E00B8B9B5 /* Handwashing.jpg */; };
+		101F3ED6250E7F5F00B8B9B5 /* wearmask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 101F3ED0250E7F5F00B8B9B5 /* wearmask.jpg */; };
+		101F3ED7250E7F5F00B8B9B5 /* fightcorona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 101F3ED1250E7F5F00B8B9B5 /* fightcorona.jpg */; };
+		101F3ED9250E81FA00B8B9B5 /* avoidcrowded.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 101F3ED8250E81FA00B8B9B5 /* avoidcrowded.jpg */; };
 		1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D70F250DB85B009B04AD /* NotificationViewController.swift */; };
 		1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D715250DBC2A009B04AD /* NewSurvey.storyboard */; };
 		1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */; };
 		1070D71E250DE026009B04AD /* SafeActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D71D250DE026009B04AD /* SafeActionViewController.swift */; };
-		1070D720250E04F2009B04AD /* Hand_washing_v2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */; };
 		1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D727250E09E1009B04AD /* SafeAction.storyboard */; };
 		108381C124ED89F900B6E89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108381C024ED89F900B6E89D /* Main.storyboard */; };
 		108381CC24ED90FF00B6E89D /* coronavirus_logo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */; };
@@ -101,11 +104,14 @@
 		101A787A24F284B50080845F /* AuthButtonUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonUIButton.swift; sourceTree = "<group>"; };
 		101A787C24F2933D0080845F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		101A788024F359510080845F /* GeofencingCtrlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingCtrlViewController.swift; sourceTree = "<group>"; };
+		101F3ECF250E7F5E00B8B9B5 /* Handwashing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Handwashing.jpg; path = ../../../../Documents/Handwashing.jpg; sourceTree = "<group>"; };
+		101F3ED0250E7F5F00B8B9B5 /* wearmask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wearmask.jpg; sourceTree = "<group>"; };
+		101F3ED1250E7F5F00B8B9B5 /* fightcorona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fightcorona.jpg; sourceTree = "<group>"; };
+		101F3ED8250E81FA00B8B9B5 /* avoidcrowded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avoidcrowded.jpg; sourceTree = "<group>"; };
 		1070D70F250DB85B009B04AD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1070D715250DBC2A009B04AD /* NewSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSurvey.storyboard; sourceTree = "<group>"; };
 		1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSurveyViewController.swift; sourceTree = "<group>"; };
 		1070D71D250DE026009B04AD /* SafeActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionViewController.swift; sourceTree = "<group>"; };
-		1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hand_washing_v2.jpg; sourceTree = "<group>"; };
 		1070D727250E09E1009B04AD /* SafeAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SafeAction.storyboard; sourceTree = "<group>"; };
 		108381C024ED89F900B6E89D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coronavirus_logo-2.jpg"; path = "../../../../Downloads/coronavirus_logo-2.jpg"; sourceTree = "<group>"; };
@@ -208,7 +214,10 @@
 		108381CA24ED90E100B6E89D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */,
+				101F3ED8250E81FA00B8B9B5 /* avoidcrowded.jpg */,
+				101F3ED1250E7F5F00B8B9B5 /* fightcorona.jpg */,
+				101F3ECF250E7F5E00B8B9B5 /* Handwashing.jpg */,
+				101F3ED0250E7F5F00B8B9B5 /* wearmask.jpg */,
 				108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */,
 			);
 			path = Images;
@@ -498,14 +507,17 @@
 				1083821624F1DAF000B6E89D /* AuthenticationSignin.storyboard in Resources */,
 				10C90DEC24ED77D900B2FB43 /* LaunchScreen.storyboard in Resources */,
 				1083821A24F2340F00B6E89D /* ShareApp.storyboard in Resources */,
+				101F3ED6250E7F5F00B8B9B5 /* wearmask.jpg in Resources */,
+				101F3ED9250E81FA00B8B9B5 /* avoidcrowded.jpg in Resources */,
 				1083820A24F113FC00B6E89D /* SignUpView.storyboard in Resources */,
 				1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */,
 				108381D724EED34800B6E89D /* Update.storyboard in Resources */,
 				1083820C24F11D3900B6E89D /* Login.storyboard in Resources */,
+				101F3ED5250E7F5F00B8B9B5 /* Handwashing.jpg in Resources */,
 				1083822E24F2448200B6E89D /* SurveyResultItem.storyboard in Resources */,
-				1070D720250E04F2009B04AD /* Hand_washing_v2.jpg in Resources */,
 				1083822824F23BF000B6E89D /* SettingItem.storyboard in Resources */,
 				108381C124ED89F900B6E89D /* Main.storyboard in Resources */,
+				101F3ED7250E7F5F00B8B9B5 /* fightcorona.jpg in Resources */,
 				10C90DE924ED77D900B2FB43 /* Assets.xcassets in Resources */,
 				1083820424F0D7D900B6E89D /* LoginView.storyboard in Resources */,
 				1083821E24F234EE00B6E89D /* UserProfile.storyboard in Resources */,

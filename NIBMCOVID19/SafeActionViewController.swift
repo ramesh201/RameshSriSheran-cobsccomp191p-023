@@ -17,7 +17,9 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    var movies: [String] = ["Hand_washing_v2.jpg","second","first"]
+    var imageList: [String] = ["fightcorona.jpg","Handwashing.jpg","wearmask.jpg","avoidcrowded.jpg"]
+    var headings: [String] = ["Stay Safe","Clean Yourself","Wear a mask","Avoid Crowded"]
+    var subHeadings: [String] = ["Stay safe and control","When and how to wash your hands","Cover your face & protect","First think about yourself"]
     var frame = CGRect.zero
     
     let imagelist = ["img1.jpg", "photo1.jpg", "photo3.jpg", "photo4.jpg", "photo5.jpg"]
@@ -39,9 +41,9 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
         
         sliderImagesArray = ["https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080","https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080", "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080"]
             scrollView.delegate = self
-        for i in 0..<sliderImagesArray.count {
-                var imageView : UIImageView
-                let xOrigin = self.scrollView.frame.size.width * CGFloat(i)
+        //for i in 0..<sliderImagesArray.count {
+              //  var imageView : UIImageView
+               // let xOrigin = self.scrollView.frame.size.width * CGFloat(i)
                 
             
             
@@ -54,7 +56,7 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
                 self.scrollView.addSubview(imageView)
             */
             
-            for  i in stride(from: 0, to: movies.count, by: 1) {
+            for  i in stride(from: 0, to: imageList.count, by: 1) {
                     var frame = CGRect.zero
                     frame.origin.x = self.scrollView.frame.size.width * CGFloat(i)
                     frame.origin.y = 0
@@ -65,7 +67,7 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
                     
                     let myImageView = UIImageView(frame: frame)
                     //let myImageView:UIImageView = UIImageView()
-                    myImageView.image = UIImage(named: movies[i])
+                    myImageView.image = UIImage(named: imageList[i])
                     myImageView.contentMode = UIView.ContentMode.scaleAspectFit
                     myImageView.frame = frame
                     //myImageView.size
@@ -75,6 +77,26 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
                     */
                     //scrollView.addSubview(imgView)
                     scrollView.addSubview(myImageView)
+                
+                let safeActionHeading = UILabel()
+                //let myImageView:UIImageView = UIImageView()
+                safeActionHeading.text = headings[i]
+                safeActionHeading.textColor = UIColor.white
+                safeActionHeading.frame = frame
+                //safeActionHeading.frame.origin.x = self.scrollView.frame.size.width * 10
+                safeActionHeading.frame.origin.y = 220
+                scrollView.addSubview(safeActionHeading)
+                
+                let safeActionSubHeading = UILabel()
+                //let myImageView:UIImageView = UIImageView()
+                safeActionSubHeading.text = subHeadings[i]
+                safeActionSubHeading.textColor = UIColor.white
+                safeActionSubHeading.font.withSize(1)
+                safeActionSubHeading.frame = frame
+                //safeActionHeading.frame.origin.x = self.scrollView.frame.size.width * 10
+                safeActionSubHeading.frame.origin.y = 250
+                scrollView.addSubview(safeActionSubHeading)
+                
                 }
 
                 
@@ -90,16 +112,16 @@ class SafeActionViewController: UIViewController, UIScrollViewDelegate {
             }
             */
             
-            }
+            //}
             self.scrollView.isPagingEnabled = true
             self.scrollView.bounces = false
             self.scrollView.showsVerticalScrollIndicator = false
             self.scrollView.showsHorizontalScrollIndicator = false
             self.scrollView.contentSize = CGSize(width:
-            self.scrollView.frame.size.width * CGFloat(sliderImagesArray.count), height: self.scrollView.frame.size.height)
+            self.scrollView.frame.size.width * CGFloat(imageList.count), height: self.scrollView.frame.size.height)
         pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControl.Event.valueChanged)
 
-            self.pageControl.numberOfPages = sliderImagesArray.count
+            self.pageControl.numberOfPages = imageList.count
             self.pageControl.currentPage = 0
             self.pageControl.tintColor = UIColor.red
             self.pageControl.pageIndicatorTintColor = UIColor.black
