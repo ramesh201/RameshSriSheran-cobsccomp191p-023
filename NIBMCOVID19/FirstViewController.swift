@@ -66,9 +66,21 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         ref = Database.database().reference()
         //FirebaseApp.configure()
         print("ref ok")
-        ref.child("users").child("1500").setValue(["username": "username 003"])
-        ref.child("users").child("1501").setValue(["username": "username 004"])
+        ref.child("users").child("1600").setValue(["username": "username 005"])
+        ref.child("users").child("1601").setValue(["username": "username 006"])
 
+        
+        guard let key = ref.child("roles").childByAutoId().key else { return }
+        let userRole = ["uid": 1500,
+                    "roleId": 1,
+                    "createdDate": "2020-09-11 10:00:00",
+                    "isActive": true,
+                    "ModifiedDate": "2020-09-11 11:00:00"] as [String : Any]
+        let childUpdates = [
+                            "/user-roles/\(1500)/": userRole]
+        ref.updateChildValues(childUpdates)
+        
+        
         let userID = "1500"//Auth.auth().currentUser?.uid
         ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
@@ -85,6 +97,47 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        ref.child("user-roles").child("1500").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+            var username = "user 01"
+            var username2 = value?.allValues//(forKey: userID) as? String ?? ""
+            
+            self.presentWinningAlert(title: username)
+            //let user = (uid: self.presentWinningAlert(title: username))
+            print(username)
+            self.txtUsername?.text = self.txtUsername?.text?.appending(username) //username
+            self.notificationDetails = username
+            
+            //print(self.isLoggedin)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        var x = ref.child("roles")
+        var y = ref.child("user-roles/\("1500")/roleId").setValue(2)
+        
+        ref.child("user-roles/\("1500")").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+            var username = ""
+            var username2 = value as? String ?? ""
+            //var x = username2
+            self.presentWinningAlert(title: username)
+            //let user = (uid: self.presentWinningAlert(title: username))
+            print(username)
+            self.txtUsername?.text = self.txtUsername?.text?.appending(username) //username
+            self.notificationDetails = username
+            
+            //print(self.isLoggedin)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
         //ref.child("users/\("1500")/username").setValue("hello 01")
 
         /*guard let key = ref.child("posts").childByAutoId().key else { return }

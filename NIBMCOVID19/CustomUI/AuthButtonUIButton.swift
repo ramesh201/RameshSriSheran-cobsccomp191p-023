@@ -15,7 +15,7 @@ class AuthButtonUIButton: UIButton {
         
         setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
         backgroundColor = .mainBlueTint
-        layer.cornerRadius = 5
+        layer.cornerRadius = 10
         heightAnchor.constraint(equalToConstant: 50).isActive = true
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
     }

@@ -77,25 +77,37 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         
-        var currUser = Auth.auth().currentUser
+        let currUser = Auth.auth().currentUser
         
         if (currUser?.isAnonymous != nil){
-            if indexPath.row == 0 {
-                return 0
-            }
-            else{
-                return 73
-            }
+            
+                if indexPath.row == 0 || indexPath.row == 4 {
+                    return 0
+                }
+                else{
+                    return 73
+                }
+            
+            
             
         }
         else{
-             if indexPath.row == 3 {
-                           return 0
-                       }
-             else{
-                return 73
-            }
             
+                 if indexPath.row == 3 {
+                               return 0
+                           }
+                 else{
+                    return 73
+                }
+            
+            /*else if indexPath.row == 4 {
+                if indexPath.row == 4 {
+                    return 0
+                }
+                else{
+                    return 100
+                }
+            }*/
         }
             
             /*_ = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -227,7 +239,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         else if segue.identifier == "showUserProfile"
         {
-            if let destination = segue.destination as? ContactUsViewController {
+            if let destination = segue.destination as? UserProfileViewController {
                 
                 print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/

@@ -9,8 +9,20 @@
 import UIKit
 import FirebaseAuth
 
+class  UpdateScrnProcList{
+    var SettingTitle: String?
+    var SettingSubtitle: String?
+    
+    init(settingTitle:String , settingSubtitle: String){
+        self.SettingTitle = settingTitle
+        self.SettingSubtitle = settingSubtitle
+    }
+}
+
 class UpdateViewController: UIViewController {
 
+    //@IBOutlet weak var lblTitle: UILabel!
+    var updateArray = [UpdateScrnProcList]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +48,42 @@ class UpdateViewController: UIViewController {
         }
         
         
+        let Notification = UpdateScrnProcList (settingTitle: "User Profile", settingSubtitle: "Visit your profile")
+           
+           
+           
+        
+        updateArray.append(Notification)
         
     }
     
-    
-      
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*var cell = tableView.dequeueReusableCell(withIdentifier: "settingstable2")
+        if cell == nil {
+            cell = UITableViewCell(style: .subtitle,reuseIdentifier: "settingstable2")
+            cell?.textLabel?.text = settingArray[indexPath.row].SettingTitle
+            cell?.detailTextLabel?.text = settingArray[indexPath.row].SettingSubtitle
+            
+        }*/
+        
+        /*var cell = tableView.dequeueReusableCell(withIdentifier: "updatestable2") as! CustomTableViewCell
+        
+        cell.lblTitle.text =
+           
+        updateArray[indexPath.row].SettingTitle
+        */
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "updatestable2")
+        if cell == nil {
+            cell = UITableViewCell(style: .subtitle,reuseIdentifier: "notificationstable")
+            cell?.textLabel?.text = updateArray[indexPath.row].SettingTitle
+            
+
+            
+    }
+        return cell!
+    }
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AuthenticationViewController {
             

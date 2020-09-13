@@ -38,6 +38,7 @@ import UIKit
 import UIKit
 import Firebase
 import GeoFire
+import FirebaseAuth
 
 class SignupViewController: UIViewController {
     // MARK: - Properties
@@ -46,7 +47,7 @@ class SignupViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "NTAXI"
+        label.text = "NIBM Covid 19"
         label.font = UIFont(name: "Avenir-Light", size: 36)
         label.textColor = UIColor(white: 1, alpha: 0.8)
         
@@ -78,19 +79,80 @@ class SignupViewController: UIViewController {
     }()
     
     private let emailTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        /*return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
+        let button = UITextField()
+        button.placeholder = "Email"
+        button.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor.systemGray
+        button.leftViewMode = .always
+        button.leftView = view
+        //button.setupLeftImage(imageName:"first")
+        /*button.setLeftView(image: UIImage.init(systemName: "first")!)*/
+        //button.setLeftView(image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        return button
     }()
     
     private let fullNameTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        /*return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
+        let button = UITextField()
+        button.placeholder = "Email"
+        button.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor.systemGray
+        button.leftViewMode = .always
+        button.leftView = view
+        //button.setupLeftImage(imageName:"first")
+        /*button.setLeftView(image: UIImage.init(systemName: "first")!)*/
+        //button.setLeftView(image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        return button
     }()
     
     private let passwordTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        /*return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
+        let button = UITextField()
+        button.isSecureTextEntry = true
+        button.placeholder = "Email"
+        button.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor.systemGray
+        button.leftViewMode = .always
+        button.leftView = view
+        //button.setupLeftImage(imageName:"first")
+        /*button.setLeftView(image: UIImage.init(systemName: "first")!)*/
+        //button.setLeftView(image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        return button
     }()
     
     private let accountTypeSegmentedControl: UISegmentedControl = {
-        let sc = UISegmentedControl(items: ["Rider", "Driver"])
+        let sc = UISegmentedControl(items: ["Student", "Academic","Non-Academic"])
         sc.backgroundColor = .backgroundColor
         sc.tintColor = UIColor(white: 1, alpha: 0.87)
         sc.selectedSegmentIndex = 0
@@ -108,7 +170,7 @@ class SignupViewController: UIViewController {
     
     let alreadyHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
-        let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        let attributedTitle = NSMutableAttributedString(string: "Already registered?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         
         attributedTitle.append(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
         
@@ -149,13 +211,14 @@ class SignupViewController: UIViewController {
     }
     
     func configureUI() {
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = UIColor.darkGray
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton])
+        let stack = UIStackView(arrangedSubviews: [/*emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton*/ emailTextFiled,fullNameTextFiled,passwordTextFiled,
+        accountTypeSegmentedControl,signUpButton])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 24

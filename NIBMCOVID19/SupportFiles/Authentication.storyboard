@@ -146,14 +146,14 @@
                                     <segue destination="GnE-9H-Gqp" kind="presentation" modalPresentationStyle="fullScreen" id="0Cf-rh-UDw"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronavirus_logo-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JKV-vu-QvV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="JKV-vu-QvV">
                                 <rect key="frame" x="100" y="209" width="214" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="m54-dG-lkR"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSu-za-BkA">
-                                <rect key="frame" x="20" y="514" width="374" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSu-za-BkA">
+                                <rect key="frame" x="20" y="448" width="374" height="70"/>
                                 <color key="backgroundColor" red="0.15284189379999999" green="0.39118910140000002" blue="0.76939731840000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="STJ-GJ-WYq"/>
@@ -165,18 +165,20 @@
                                     <segue destination="fBX-xi-RP6" kind="show" id="RFc-eP-ing"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0v-AC-HFf">
-                                <rect key="frame" x="60" y="604" width="294" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0v-AC-HFf">
+                                <rect key="frame" x="60" y="526" width="294" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UKz-5w-mUa"/>
                                 </constraints>
-                                <state key="normal" title="Already have an account?"/>
+                                <state key="normal" title="Already registered?">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Um1-2A-San" kind="show" id="mLZ-VI-2zb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4O-lq-e5z">
-                                <rect key="frame" x="60" y="698" width="294" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4O-lq-e5z">
+                                <rect key="frame" x="60" y="574" width="294" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="LBn-H0-R5K"/>
                                 </constraints>
@@ -185,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.8777736919239133" blue="0.72984381965816625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZSu-za-BkA" firstAttribute="top" secondItem="JKV-vu-QvV" secondAttribute="bottom" constant="205" id="1Ow-Eo-EIO"/>
                             <constraint firstItem="qEc-0F-tfq" firstAttribute="trailing" secondItem="JKV-vu-QvV" secondAttribute="trailing" constant="100" id="6ph-8E-9OZ"/>
@@ -256,6 +258,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coronavirus_logo-2.jpg" width="624.75" height="240.75"/>
+        <image name="Image" width="416.5" height="160.5"/>
     </resources>
 </document>

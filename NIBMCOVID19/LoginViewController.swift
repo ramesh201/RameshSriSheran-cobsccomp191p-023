@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
       // MARK: - Properties
       private let titleLabel: UILabel = {
           let label = UILabel()
-          label.text = "NTAXI"
+          label.text = "NIBM Covid 19"
           label.font = UIFont(name: "Avenir-Light", size: 36)
           label.textColor = UIColor(white: 1, alpha: 0.8)
           
@@ -112,7 +112,7 @@ image: UIImage(systemName: "first")!)
     
     let dontHaveAccountButton: UIButton = {
           let button = UIButton(type: .system)
-          let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+          let attributedTitle = NSMutableAttributedString(string: "Want to use the app?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
           
           attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
           
@@ -150,8 +150,8 @@ image: UIImage(systemName: "first")!)
             .first?.windows
             .filter({$0.isKeyWindow}).first
             
-            guard let controller = keyWindow?.rootViewController as? FirstViewController else { return }
-            controller.configure()
+            //guard let controller = keyWindow?.rootViewController as? FirstViewController else { return }
+            //controller.configure()
             
             self.dismiss(animated: true, completion: nil)
         }
@@ -168,7 +168,7 @@ image: UIImage(systemName: "first")!)
         
         configureNavigationBar()
         
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = UIColor.darkGray
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
@@ -190,7 +190,17 @@ image: UIImage(systemName: "first")!)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: 32)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FirstViewController {
+            
+            print(destination)
+            /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
+            //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
+            
+            //tblSettingList.deselectRow(at: tblSettingList.indexPathForSelectedRow!, animated: true)
+            
+        }
+    }
     func configureNavigationBar() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
