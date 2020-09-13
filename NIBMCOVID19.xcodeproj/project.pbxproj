@@ -18,6 +18,10 @@
 		101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A788024F359510080845F /* GeofencingCtrlViewController.swift */; };
 		1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D70F250DB85B009B04AD /* NotificationViewController.swift */; };
 		1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D715250DBC2A009B04AD /* NewSurvey.storyboard */; };
+		1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */; };
+		1070D71E250DE026009B04AD /* SafeActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D71D250DE026009B04AD /* SafeActionViewController.swift */; };
+		1070D720250E04F2009B04AD /* Hand_washing_v2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */; };
+		1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D727250E09E1009B04AD /* SafeAction.storyboard */; };
 		108381C124ED89F900B6E89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108381C024ED89F900B6E89D /* Main.storyboard */; };
 		108381CC24ED90FF00B6E89D /* coronavirus_logo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */; };
 		108381D124EEC70900B6E89D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108381D024EEC70900B6E89D /* SettingViewController.swift */; };
@@ -99,6 +103,10 @@
 		101A788024F359510080845F /* GeofencingCtrlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingCtrlViewController.swift; sourceTree = "<group>"; };
 		1070D70F250DB85B009B04AD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1070D715250DBC2A009B04AD /* NewSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSurvey.storyboard; sourceTree = "<group>"; };
+		1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSurveyViewController.swift; sourceTree = "<group>"; };
+		1070D71D250DE026009B04AD /* SafeActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionViewController.swift; sourceTree = "<group>"; };
+		1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hand_washing_v2.jpg; sourceTree = "<group>"; };
+		1070D727250E09E1009B04AD /* SafeAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SafeAction.storyboard; sourceTree = "<group>"; };
 		108381C024ED89F900B6E89D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coronavirus_logo-2.jpg"; path = "../../../../Downloads/coronavirus_logo-2.jpg"; sourceTree = "<group>"; };
 		108381D024EEC70900B6E89D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 		108381CA24ED90E100B6E89D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1070D71F250E04F1009B04AD /* Hand_washing_v2.jpg */,
 				108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */,
 			);
 			path = Images;
@@ -224,6 +233,7 @@
 				1070D715250DBC2A009B04AD /* NewSurvey.storyboard */,
 				1083821324F163D400B6E89D /* UpdateAuthentication.storyboard */,
 				108381D424EED33400B6E89D /* Home.storyboard */,
+				1070D727250E09E1009B04AD /* SafeAction.storyboard */,
 				1083820124F0D7C200B6E89D /* Signup.storyboard */,
 				1083820324F0D7D900B6E89D /* LoginView.storyboard */,
 				1083820F24F14DBA00B6E89D /* Authentication.storyboard */,
@@ -318,6 +328,8 @@
 				1083822324F23A2D00B6E89D /* SurveyResultViewController.swift */,
 				1083822524F23A4C00B6E89D /* UserProfileViewController.swift */,
 				1070D70F250DB85B009B04AD /* NotificationViewController.swift */,
+				1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */,
+				1070D71D250DE026009B04AD /* SafeActionViewController.swift */,
 			);
 			path = NIBMCOVID19;
 			sourceTree = "<group>";
@@ -491,6 +503,7 @@
 				108381D724EED34800B6E89D /* Update.storyboard in Resources */,
 				1083820C24F11D3900B6E89D /* Login.storyboard in Resources */,
 				1083822E24F2448200B6E89D /* SurveyResultItem.storyboard in Resources */,
+				1070D720250E04F2009B04AD /* Hand_washing_v2.jpg in Resources */,
 				1083822824F23BF000B6E89D /* SettingItem.storyboard in Resources */,
 				108381C124ED89F900B6E89D /* Main.storyboard in Resources */,
 				10C90DE924ED77D900B2FB43 /* Assets.xcassets in Resources */,
@@ -498,6 +511,7 @@
 				1083821E24F234EE00B6E89D /* UserProfile.storyboard in Resources */,
 				1083821824F2334600B6E89D /* ContactUs.storyboard in Resources */,
 				1083823224F253EB00B6E89D /* GeofencingView.storyboard in Resources */,
+				1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +652,9 @@
 				1083823924F27BF300B6E89D /* UserDetail.swift in Sources */,
 				1083822424F23A2D00B6E89D /* SurveyResultViewController.swift in Sources */,
 				10C90DE724ED77D900B2FB43 /* NIBMCOVID19.xcdatamodeld in Sources */,
+				1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */,
 				10C90DDB24ED77D900B2FB43 /* AppDelegate.swift in Sources */,
+				1070D71E250DE026009B04AD /* SafeActionViewController.swift in Sources */,
 				1083820024F0B61A00B6E89D /* ViewController.swift in Sources */,
 				1083823B24F27C0400B6E89D /* Notification.swift in Sources */,
 				101A787724F283A30080845F /* LocationHandler.swift in Sources */,

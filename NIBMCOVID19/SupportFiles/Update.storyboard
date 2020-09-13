@@ -17,6 +17,83 @@
             </objects>
             <point key="canvasLocation" x="506" y="198"/>
         </scene>
+        <!--New Notification-->
+        <scene sceneID="6ds-dv-6g5">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-eTd-xr-NEu" id="eTd-xr-NEu" customClass="NotificationViewController" customModule="NIBMCOVID19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Cj-rw-4Is">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-Xl-MGb">
+                                <rect key="frame" x="186" y="62" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-3Z-qDm">
+                                <rect key="frame" x="20" y="105" width="363.5" height="26.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="33.5" placeholderIntrinsicHeight="26.5" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNx-qG-W1F">
+                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="244" verticalHuggingPriority="253" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="26.5" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hov-Ms-wGX">
+                                        <rect key="frame" x="83.5" y="0.0" width="280" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="366.5" placeholderIntrinsicHeight="150" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="n9R-k0-iwW">
+                                <rect key="frame" x="20" y="148" width="366.5" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJe-jA-XOr">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="150"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="283" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-Or-gn1">
+                                        <rect key="frame" x="83.5" y="0.0" width="283" height="150"/>
+                                        <nil key="textColor"/>
+                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aKo-dN-h8w"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTJ-xb-UUN">
+                                <rect key="frame" x="105" y="306" width="282" height="43"/>
+                                <color key="backgroundColor" red="0.83937564840000001" green="0.86277075719999996" blue="0.89989234500000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ADD NOTIFICATION"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TTJ-xb-UUN" firstAttribute="top" secondItem="bMP-Or-gn1" secondAttribute="bottom" constant="8" id="DNo-w1-gR5"/>
+                            <constraint firstItem="IIp-lS-2FI" firstAttribute="trailing" secondItem="n9R-k0-iwW" secondAttribute="trailing" constant="27.5" id="Jxd-hU-kCq"/>
+                            <constraint firstItem="n9R-k0-iwW" firstAttribute="top" secondItem="Hov-Ms-wGX" secondAttribute="bottom" constant="16.5" id="LwM-ck-dD6"/>
+                            <constraint firstItem="F9n-3Z-qDm" firstAttribute="top" secondItem="IIp-lS-2FI" secondAttribute="top" constant="17" id="RGc-mq-2nU"/>
+                            <constraint firstItem="F9n-3Z-qDm" firstAttribute="leading" secondItem="IIp-lS-2FI" secondAttribute="leading" constant="20" id="UIt-cY-udU"/>
+                            <constraint firstItem="TTJ-xb-UUN" firstAttribute="leading" secondItem="IIp-lS-2FI" secondAttribute="leading" constant="105" id="Win-rg-DgO"/>
+                            <constraint firstItem="IIp-lS-2FI" firstAttribute="trailing" secondItem="TTJ-xb-UUN" secondAttribute="trailing" constant="27" id="bob-wD-4X7"/>
+                            <constraint firstItem="IIp-lS-2FI" firstAttribute="trailing" secondItem="F9n-3Z-qDm" secondAttribute="trailing" constant="30.5" id="icR-7U-ICs"/>
+                            <constraint firstItem="n9R-k0-iwW" firstAttribute="leading" secondItem="IIp-lS-2FI" secondAttribute="leading" constant="20" id="rbj-gr-Ijr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IIp-lS-2FI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Notification" id="he5-G9-jQ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxK-t4-Ieu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5942028985507" y="77.678571428571431"/>
+        </scene>
         <!--Update View Controller-->
         <scene sceneID="IRa-1b-an4">
             <objects>
@@ -70,6 +147,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <segue destination="aiE-mm-MCG" kind="show" id="fR4-mi-qpH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="        New survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOU-ZP-Rgs">
                                 <rect key="frame" x="20" y="261" width="320" height="44"/>
@@ -100,6 +180,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <segue destination="eTd-xr-NEu" kind="show" id="gTQ-B6-p04"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -183,6 +266,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSu-YM-rmp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-893" y="605"/>
+        </scene>
+        <!--NewSurvey-->
+        <scene sceneID="1u2-La-Y7I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewSurvey" id="aiE-mm-MCG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FVy-3k-Rbm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKe-YD-hFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="738"/>
         </scene>
     </scenes>
     <resources>

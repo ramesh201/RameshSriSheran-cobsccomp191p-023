@@ -9,6 +9,7 @@
 import Firebase
 import CoreLocation
 import GeoFire
+import FirebaseAuth
 
 let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")

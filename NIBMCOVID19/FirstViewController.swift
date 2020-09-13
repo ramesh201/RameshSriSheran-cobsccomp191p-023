@@ -29,6 +29,10 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tblNotification: UITableView!
     @IBOutlet var lblUserName: UILabel!
     @IBAction func btnSafeAction(_ sender: UIButton) {
+        
+    }
+    @IBAction func btnLogout(_ sender: Any) {
+        
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
@@ -36,6 +40,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
           print ("Error signing out: %@", signOutError)
         }
         super.viewDidLoad()
+        
     }
     @IBAction func btnLogin(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: "gametrainer2013@gmail.com", password: "iosapp") { [weak self] authResult, error in
@@ -196,6 +201,11 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func configure(){
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
