@@ -16,6 +16,8 @@
 		101A787B24F284B50080845F /* AuthButtonUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787A24F284B50080845F /* AuthButtonUIButton.swift */; };
 		101A787D24F2933D0080845F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A787C24F2933D0080845F /* CustomTableViewCell.swift */; };
 		101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A788024F359510080845F /* GeofencingCtrlViewController.swift */; };
+		1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D70F250DB85B009B04AD /* NotificationViewController.swift */; };
+		1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D715250DBC2A009B04AD /* NewSurvey.storyboard */; };
 		108381C124ED89F900B6E89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108381C024ED89F900B6E89D /* Main.storyboard */; };
 		108381CC24ED90FF00B6E89D /* coronavirus_logo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */; };
 		108381D124EEC70900B6E89D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108381D024EEC70900B6E89D /* SettingViewController.swift */; };
@@ -95,6 +97,8 @@
 		101A787A24F284B50080845F /* AuthButtonUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButtonUIButton.swift; sourceTree = "<group>"; };
 		101A787C24F2933D0080845F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		101A788024F359510080845F /* GeofencingCtrlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencingCtrlViewController.swift; sourceTree = "<group>"; };
+		1070D70F250DB85B009B04AD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		1070D715250DBC2A009B04AD /* NewSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSurvey.storyboard; sourceTree = "<group>"; };
 		108381C024ED89F900B6E89D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coronavirus_logo-2.jpg"; path = "../../../../Downloads/coronavirus_logo-2.jpg"; sourceTree = "<group>"; };
 		108381D024EEC70900B6E89D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				1083820B24F11D3900B6E89D /* Login.storyboard */,
 				1083820924F113FC00B6E89D /* SignUpView.storyboard */,
 				108381D624EED34800B6E89D /* Update.storyboard */,
+				1070D715250DBC2A009B04AD /* NewSurvey.storyboard */,
 				1083821324F163D400B6E89D /* UpdateAuthentication.storyboard */,
 				108381D424EED33400B6E89D /* Home.storyboard */,
 				1083820124F0D7C200B6E89D /* Signup.storyboard */,
@@ -312,6 +317,7 @@
 				1083822124F239FE00B6E89D /* ShareAppViewController.swift */,
 				1083822324F23A2D00B6E89D /* SurveyResultViewController.swift */,
 				1083822524F23A4C00B6E89D /* UserProfileViewController.swift */,
+				1070D70F250DB85B009B04AD /* NotificationViewController.swift */,
 			);
 			path = NIBMCOVID19;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				10C90DEC24ED77D900B2FB43 /* LaunchScreen.storyboard in Resources */,
 				1083821A24F2340F00B6E89D /* ShareApp.storyboard in Resources */,
 				1083820A24F113FC00B6E89D /* SignUpView.storyboard in Resources */,
+				1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */,
 				108381D724EED34800B6E89D /* Update.storyboard in Resources */,
 				1083820C24F11D3900B6E89D /* Login.storyboard in Resources */,
 				1083822E24F2448200B6E89D /* SurveyResultItem.storyboard in Resources */,
@@ -644,6 +651,7 @@
 				101A786F24F282AE0080845F /* Service.swift in Sources */,
 				1083820624F0DE0000B6E89D /* UpdateViewController.swift in Sources */,
 				1083822024F236A100B6E89D /* ContactUsViewController.swift in Sources */,
+				1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */,
 				101A787124F283000080845F /* User.swift in Sources */,
 				101A787B24F284B50080845F /* AuthButtonUIButton.swift in Sources */,
 			);
