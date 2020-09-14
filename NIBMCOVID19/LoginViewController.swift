@@ -22,6 +22,18 @@ class LoginViewController: UIViewController {
           return label
       }()
       
+    let backScreenButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+        
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    }()
+    
       /*private lazy var emailContainerView: UIView = {
        guard let view = UIView().inputContainerView(image: UIImage(systemName: "first")!, textField: emailTextFiled)
             /*.inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: emailTextFiled)*/
@@ -85,6 +97,16 @@ image: UIImage(systemName: "first")!)
     }()
     
     private let passwordField: UITextField = {
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24, height: 24))
+        let image = UIImage(systemName: "first")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
         let button = UITextField()
         button.placeholder = "Password"
         button.font = UIFont.boldSystemFont(ofSize: 20)

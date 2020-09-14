@@ -204,7 +204,7 @@ class SignupViewController: UIViewController {
             .filter({$0.isKeyWindow}).first
             
             guard let controller = keyWindow?.rootViewController as? FirstViewController else { return }
-            controller.configure()
+            //controller.configure()
             
             self.dismiss(animated: true, completion: nil)
         }

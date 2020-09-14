@@ -7,15 +7,54 @@
 //
 
 import UIKit
+import MapKit
 
-class ContactUsViewController: UIViewController {
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark)
+}
 
+
+
+class ContactUsViewController: UIViewController, MKMapViewDelegate {
+
+    @IBOutlet weak var btnMap: UIButton!
+    @IBAction func mapBtn(_ sender: Any) {
+        
+        mapView.mapType = .standard
+        
+        
+    }
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print("Contact Us")
+        //6.906449, 79.870615
+        let nibm = CLLocation(latitude: 6.906555, longitude: 79.870740)
+        let regionRadius: CLLocationDistance = 100.0
+        
+        let region = MKCoordinateRegion(center: nibm.coordinate,latitudinalMeters: regionRadius,longitudinalMeters: regionRadius)
+        
+        mapView.setRegion(region,animated: true)
+        mapView.delegate = self
+        
+        var pin : CLLocationCoordinate2D = CLLocationCoordinate2DMake(6.906555, 79.870740)
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = pin
+        annotation.title = "NIBM Colombo"
+        self.mapView.addAnnotation(annotation)
+        
     }
+    
+   /* extension ContactUsViewController: MKMapViewDelegate
+    {
+        func mapViewWillStartRenderingMap(_ mapView: MKMapView) {
+            print("rendering ....")
+        }
+    }
+    */
     
 
     /*
