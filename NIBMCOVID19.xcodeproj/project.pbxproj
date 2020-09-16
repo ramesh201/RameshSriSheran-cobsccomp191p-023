@@ -24,6 +24,9 @@
 		101F3EDE250F7E7600B8B9B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F3EDD250F7E7600B8B9B5 /* Constants.swift */; };
 		101F3EE0250F84C800B8B9B5 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F3EDF250F84C800B8B9B5 /* ArtworkView.swift */; };
 		101F3EE2250F854700B8B9B5 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F3EE1250F854700B8B9B5 /* Artwork.swift */; };
+		102C78AC2512468C007B55C4 /* demo1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102C78AB2512468C007B55C4 /* demo1.storyboard */; };
+		102C78AE2512469F007B55C4 /* demo2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102C78AD2512469F007B55C4 /* demo2.storyboard */; };
+		102C78B02512472A007B55C4 /* Demo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C78AF2512472A007B55C4 /* Demo1ViewController.swift */; };
 		1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D70F250DB85B009B04AD /* NotificationViewController.swift */; };
 		1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D715250DBC2A009B04AD /* NewSurvey.storyboard */; };
 		1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */; };
@@ -116,6 +119,9 @@
 		101F3EDD250F7E7600B8B9B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		101F3EDF250F84C800B8B9B5 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		101F3EE1250F854700B8B9B5 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		102C78AB2512468C007B55C4 /* demo1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = demo1.storyboard; sourceTree = "<group>"; };
+		102C78AD2512469F007B55C4 /* demo2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = demo2.storyboard; sourceTree = "<group>"; };
+		102C78AF2512472A007B55C4 /* Demo1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1ViewController.swift; sourceTree = "<group>"; };
 		1070D70F250DB85B009B04AD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1070D715250DBC2A009B04AD /* NewSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSurvey.storyboard; sourceTree = "<group>"; };
 		1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSurveyViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +276,8 @@
 				1083821B24F234A100B6E89D /* SurveyResults.storyboard */,
 				1083821D24F234EE00B6E89D /* UserProfile.storyboard */,
 				1083823124F253EB00B6E89D /* GeofencingView.storyboard */,
+				102C78AB2512468C007B55C4 /* demo1.storyboard */,
+				102C78AD2512469F007B55C4 /* demo2.storyboard */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -358,6 +366,7 @@
 				1070D70F250DB85B009B04AD /* NotificationViewController.swift */,
 				1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */,
 				1070D71D250DE026009B04AD /* SafeActionViewController.swift */,
+				102C78AF2512472A007B55C4 /* Demo1ViewController.swift */,
 			);
 			path = NIBMCOVID19;
 			sourceTree = "<group>";
@@ -526,6 +535,7 @@
 				1083820224F0D7C200B6E89D /* Signup.storyboard in Resources */,
 				1083821624F1DAF000B6E89D /* AuthenticationSignin.storyboard in Resources */,
 				10C90DEC24ED77D900B2FB43 /* LaunchScreen.storyboard in Resources */,
+				102C78AE2512469F007B55C4 /* demo2.storyboard in Resources */,
 				1083821A24F2340F00B6E89D /* ShareApp.storyboard in Resources */,
 				101F3ED6250E7F5F00B8B9B5 /* wearmask.jpg in Resources */,
 				101F3ED9250E81FA00B8B9B5 /* avoidcrowded.jpg in Resources */,
@@ -542,6 +552,7 @@
 				1083820424F0D7D900B6E89D /* LoginView.storyboard in Resources */,
 				1083821E24F234EE00B6E89D /* UserProfile.storyboard in Resources */,
 				1083821824F2334600B6E89D /* ContactUs.storyboard in Resources */,
+				102C78AC2512468C007B55C4 /* demo1.storyboard in Resources */,
 				1083823224F253EB00B6E89D /* GeofencingView.storyboard in Resources */,
 				1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */,
 			);
@@ -697,6 +708,7 @@
 				101A787D24F2933D0080845F /* CustomTableViewCell.swift in Sources */,
 				108381D124EEC70900B6E89D /* SettingViewController.swift in Sources */,
 				1083820E24F11D7D00B6E89D /* LoginViewController.swift in Sources */,
+				102C78B02512472A007B55C4 /* Demo1ViewController.swift in Sources */,
 				101A787924F284250080845F /* Extensions.swift in Sources */,
 				101A786F24F282AE0080845F /* Service.swift in Sources */,
 				1083820624F0DE0000B6E89D /* UpdateViewController.swift in Sources */,

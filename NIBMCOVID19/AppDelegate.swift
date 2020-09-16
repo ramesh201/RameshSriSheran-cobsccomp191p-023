@@ -12,6 +12,9 @@ import Firebase
 import FirebaseCore
 
 @UIApplicationMain
+
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

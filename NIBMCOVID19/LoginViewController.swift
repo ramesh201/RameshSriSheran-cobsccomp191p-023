@@ -15,13 +15,22 @@ class LoginViewController: UIViewController {
       // MARK: - Properties
       private let titleLabel: UILabel = {
           let label = UILabel()
-          label.text = "NIBM Covid 19"
-          label.font = UIFont(name: "Avenir-Light", size: 36)
           label.textColor = UIColor(white: 1, alpha: 0.8)
+          label.font = UIFont(name: "Avenir-Light", size: 36)
+          label.text = "NIBM Covid 19"
           
           return label
       }()
       
+    @IBAction func btnBack(_ sender: UIButton) {
+
+        navigationController?.popToRootViewController(animated: true)
+        
+        self.dismiss(animated: true, completion: nil)
+        /*
+        let vc = FirstViewController()
+        navigationController?.pushViewController(vc, animated: true)*/
+    }
     let backScreenButton: UIButton = {
         let button = UIButton(type: .system)
         let attributedTitle = NSMutableAttributedString(string: "  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
@@ -98,8 +107,8 @@ image: UIImage(systemName: "first")!)
     
     private let passwordField: UITextField = {
         
-        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24, height: 24))
-        let image = UIImage(systemName: "first")
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red

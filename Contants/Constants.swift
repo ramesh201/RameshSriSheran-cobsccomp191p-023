@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
+import Foundation
 
-class Constants: UIViewController {
+public class Constants {
 
-    var latitude: CGFloat = 6.906555
-    var longitude: CGFloat = 79.870740
+    var nibmLatitude: CLLocationDegrees = 6.906555
+    var nibmLongitude: CLLocationDegrees = 79.870740
     //6.906555, 79.870740
     
 }

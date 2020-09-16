@@ -78,7 +78,32 @@ class SignupViewController: UIViewController {
         return view
     }()
     
-    private let emailTextFiled: UITextField = {
+    
+    
+    private let fullNameTextFiled: UITextField = {
+        /*return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
+        let button = UITextField()
+        button.placeholder = "Full Name"
+        button.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor.systemGray
+        button.leftViewMode = .always
+        button.leftView = view
+        //button.setupLeftImage(imageName:"first")
+        /*button.setLeftView(image: UIImage.init(systemName: "first")!)*/
+        //button.setLeftView(image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        return button
+    }()
+    private let addressTextFiled: UITextField = {
         /*return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
         
         let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
@@ -91,7 +116,7 @@ class SignupViewController: UIViewController {
         view.addSubview(imageView)
         
         let button = UITextField()
-        button.placeholder = "Email"
+        button.placeholder = "Address"
         button.font = UIFont.boldSystemFont(ofSize: 20)
         button.backgroundColor = UIColor.systemGray
         button.leftViewMode = .always
@@ -102,8 +127,8 @@ class SignupViewController: UIViewController {
         return button
     }()
     
-    private let fullNameTextFiled: UITextField = {
-        /*return UITextField().textField(withPlaceholder: "Full Name", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
+    private let emailTextFiled: UITextField = {
+        /*return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false,image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)*/
         
         let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
         let image = UIImage(systemName: "pencil.circle")
@@ -140,7 +165,7 @@ class SignupViewController: UIViewController {
         
         let button = UITextField()
         button.isSecureTextEntry = true
-        button.placeholder = "Email"
+        button.placeholder = "Password"
         button.font = UIFont.boldSystemFont(ofSize: 20)
         button.backgroundColor = UIColor.systemGray
         button.leftViewMode = .always
@@ -196,7 +221,7 @@ class SignupViewController: UIViewController {
             
             //handle error
             
-            let keyWindow = UIApplication.shared.connectedScenes
+            /*let keyWindow = UIApplication.shared.connectedScenes
             .filter({$0.activationState == .foregroundActive})
             .map({$0 as? UIWindowScene})
             .compactMap({$0})
@@ -205,6 +230,7 @@ class SignupViewController: UIViewController {
             
             guard let controller = keyWindow?.rootViewController as? FirstViewController else { return }
             //controller.configure()
+             */
             
             self.dismiss(animated: true, completion: nil)
         }
@@ -217,7 +243,7 @@ class SignupViewController: UIViewController {
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [/*emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton*/ emailTextFiled,fullNameTextFiled,passwordTextFiled,
+        let stack = UIStackView(arrangedSubviews: [/*emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton*/ fullNameTextFiled,addressTextFiled,emailTextFiled,passwordTextFiled,
         accountTypeSegmentedControl,signUpButton])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
@@ -240,6 +266,8 @@ class SignupViewController: UIViewController {
         guard let fullName = fullNameTextFiled.text else { return }
         let roleType = accountTypeSegmentedControl.selectedSegmentIndex
         
+        let address = addressTextFiled.text
+        
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("Faild to register user with error \(error)")
@@ -251,7 +279,8 @@ class SignupViewController: UIViewController {
             let userObj = [
             "userEmail": email,
             "userFullName": fullName,
-            "roleType": roleType
+            "roleType": roleType,
+            "address": address
             ] as [String : Any]
             
             if roleType == 1 {

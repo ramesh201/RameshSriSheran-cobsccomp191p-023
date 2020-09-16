@@ -70,10 +70,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-iL-6De">
-                                <rect key="frame" x="184" y="488" width="46" height="30"/>
+                                <rect key="frame" x="171" y="488" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Reset Map"/>
                                 <connections>
+                                    <action selector="btnResetMap:" destination="I52-E2-SVf" eventType="touchUpInside" id="4Ca-Qt-J85"/>
                                     <action selector="mapBtn:" destination="I52-E2-SVf" eventType="touchUpInside" id="ONP-X8-aTr"/>
                                 </connections>
                             </button>

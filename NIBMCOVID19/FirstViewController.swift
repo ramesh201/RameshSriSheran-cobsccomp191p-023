@@ -76,13 +76,13 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         
         guard let key = ref.child("roles").childByAutoId().key else { return }
-        let userRole = ["uid": 1500,
+        let userRole = ["uid": 2000,
                     "roleId": 1,
                     "createdDate": "2020-09-11 10:00:00",
                     "isActive": true,
                     "ModifiedDate": "2020-09-11 11:00:00"] as [String : Any]
         let childUpdates = [
-                            "/user-roles/\(1500)/": userRole]
+                            "/user-roles/\(2000)/": userRole]
         ref.updateChildValues(childUpdates)
         
         
