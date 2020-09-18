@@ -7,16 +7,97 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseCore
+import CoreLocation
 
 class NotificationViewController: UIViewController {
+    
+    @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet weak var txtBody: UITextField!
+    
+    @IBAction func btnSaveNotifi(_ sender: UIButton) {
+        
+        
+        
+        var userID = "1601"
+        userID = Auth.auth().currentUser?.email as! String
+       
+           //guard let uid = Auth.auth().currentUser?.uid else { return }
+        let uid = String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)
+        
+        let formatter = DateFormatter()
+                  // initially set the format based on your datepicker date / server String
+                  formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
+                  let myString = formatter.string(from: Date()) // string purpose I add here
+                  // convert your string to date
+                  let yourDate = formatter.date(from: myString)
+                  //then again set the date format whhich type of output you need
+                  formatter.dateFormat = "dd-MMM-yyyy"
+                  // again convert your date to string
+                  let myStringafd = formatter.string(from: yourDate!)
+        
+        
+        
+        
+        userID = Auth.auth().currentUser?.uid as! String
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+          let roleId = value?["roleType"] as? String ?? ""
+
+            let userObj = [
+                "notifiTitle": self.txtTitle.text,
+                "notifiBody": self.txtBody.text,
+            "uid": value?["uid"] as? String ?? "",
+            "userID": String(uid.lowercased().split(separator: "@")[0]),
+            "roleType": roleId,
+            "createdDate": myStringafd
+                ] as [String : Any]
+            
+            self.uploadUserNotificationsAndShowHomeController(userId: String(uid.lowercased().split(separator: "@")[0]), userObj: userObj)
+            
+          }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        /*Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+            var username = "user 01"
+            var username2 = value?.allValues//(forKey: userID) as? String ?? ""
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }*/
+        
+        /*REF_USERS.child(uid).observe(.value) { (snapshot) in
+                
+                let uid = snapshot.key
+                
+                guard let dictionary = snapshot.value as? [String: Any] else { return }
+            }*/
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//var ref: DatabaseReference!
         // Do any additional setup after loading the view.
     }
     
-
+    func uploadUserNotificationsAndShowHomeController(userId: String, userObj: [String: Any]) {
+        REF_NOTIFICATIONS.child(userId).updateChildValues(userObj) { (error, ref) in
+           
+            self.dismiss(animated: true, completion: nil)
+            
+            //let vc = FirstViewController()
+            //self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -22,6 +22,8 @@ class  UpdateScrnProcList{
 class UpdateViewController: UIViewController {
 
     //@IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblCNotifi: UILabel!
+    @IBOutlet weak var lblGoCNotifi: UIButton!
     var updateArray = [UpdateScrnProcList]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,19 +41,17 @@ class UpdateViewController: UIViewController {
              if (auth.currentUser?.isAnonymous != nil){
                 //performSegue(withIdentifier: "showUpdateView", sender: self)
                 print("logged in")
+                self.lblCNotifi.isHidden = true
+                self.lblGoCNotifi.isHidden = false
             }
             else{
                 self.performSegue(withIdentifier: "showAuthentication", sender: self)
-                                print("not logged in")
+                print("not logged in")
                 
             }
         }
         
-        
         let Notification = UpdateScrnProcList (settingTitle: "User Profile", settingSubtitle: "Visit your profile")
-           
-           
-           
         
         updateArray.append(Notification)
         

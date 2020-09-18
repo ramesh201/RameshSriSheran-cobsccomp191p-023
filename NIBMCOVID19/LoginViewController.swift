@@ -24,12 +24,12 @@ class LoginViewController: UIViewController {
       
     @IBAction func btnBack(_ sender: UIButton) {
 
-        navigationController?.popToRootViewController(animated: true)
+        //navigationController?.popToRootViewController(animated: true)
         
         self.dismiss(animated: true, completion: nil)
-        /*
+        
         let vc = FirstViewController()
-        navigationController?.pushViewController(vc, animated: true)*/
+        navigationController?.pushViewController(vc, animated: true)
     }
     let backScreenButton: UIButton = {
         let button = UIButton(type: .system)
@@ -107,8 +107,8 @@ image: UIImage(systemName: "first")!)
     
     private let passwordField: UITextField = {
         
-        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
-        let image = UIImage(systemName: "pencil.circle")
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24, height: 24))
+        let image = UIImage(systemName: "first")
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red

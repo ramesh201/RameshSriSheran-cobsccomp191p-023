@@ -59,7 +59,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="283" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-Or-gn1">
                                         <rect key="frame" x="83.5" y="0.0" width="283" height="150"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                     </textField>
                                 </subviews>
@@ -72,6 +72,9 @@
                                 <color key="backgroundColor" red="0.83937564840000001" green="0.86277075719999996" blue="0.89989234500000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="ADD NOTIFICATION"/>
+                                <connections>
+                                    <action selector="btnSaveNotifi:" destination="eTd-xr-NEu" eventType="touchUpInside" id="sg1-wM-fgW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,6 +92,10 @@
                         <viewLayoutGuide key="safeArea" id="IIp-lS-2FI"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Notification" id="he5-G9-jQ0"/>
+                    <connections>
+                        <outlet property="txtBody" destination="bMP-Or-gn1" id="fbx-zm-JBG"/>
+                        <outlet property="txtTitle" destination="Hov-Ms-wGX" id="cdt-f6-AuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxK-t4-Ieu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,6 +172,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yg-Ke-3nj">
                                         <rect key="frame" x="0.0" y="0.0" width="315.5" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="lblCreateNotifi"/>
                                         <attributedString key="attributedText">
                                             <fragment content="       Create Notification                                ">
                                                 <attributes>
@@ -178,6 +186,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz5-3s-El8">
                                         <rect key="frame" x="316.5" y="0.0" width="30" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="btnGoCreateNotifi"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="&gt;"/>
                                         <connections>
@@ -241,6 +250,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="elJ-dl-r7s"/>
                     <connections>
+                        <outlet property="lblCNotifi" destination="5Yg-Ke-3nj" id="Fjq-To-G3S"/>
+                        <outlet property="lblGoCNotifi" destination="Fz5-3s-El8" id="OWy-rp-w6L"/>
                         <segue destination="Lrn-up-lDn" kind="presentation" identifier="showAuthentication" modalPresentationStyle="fullScreen" id="dVy-Un-dv5"/>
                     </connections>
                 </viewController>

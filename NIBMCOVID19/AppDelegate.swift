@@ -10,14 +10,13 @@ import UIKit
 import CoreData
 import Firebase
 import FirebaseCore
+import CoreLocation
 
 @UIApplicationMain
 
 
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -86,6 +85,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
+
+
+extension AppDelegate: CLLocationManagerDelegate {
+  
+  func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    if region is CLCircularRegion {
+      print("Enter")
+    }
+  }
+  
+  func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+    if region is CLCircularRegion {
+      print("Exit")
+    }
+  }
+}
+
 

@@ -1,39 +1,4 @@
-//
-//  SignupViewController.swift
-//  NIBMCOVID19
-//
-//  Created by Ramesh Sheran on 8/22/20.
-//  Copyright © 2020 Ramesh Sheran. All rights reserved.
-//
 
-import UIKit
-
-/*class SignupViewController: UIViewController {
-    var settingObj: SettingList?
-    
-    @IBOutlet weak var lblSignupHeader: UILabel!
-    @IBOutlet weak var SignupLbl: UILabel!
-    var lblHeader: String!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("signup")
-        //lblSignupHeader.text = "Signup" /*"\(String(describing: settingObj?.SettingTitle)) comes under the category \(String(describing: settingObj?.SettingSubtitle))"*/
-        // Do any additional setup after loading the view.
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}*/
 
 import UIKit
 import Firebase
@@ -88,7 +53,6 @@ class SignupViewController: UIViewController {
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red
-
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
         view.addSubview(imageView)
         
@@ -111,7 +75,6 @@ class SignupViewController: UIViewController {
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red
-
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
         view.addSubview(imageView)
         
@@ -135,7 +98,6 @@ class SignupViewController: UIViewController {
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red
-
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
         view.addSubview(imageView)
         
@@ -173,6 +135,26 @@ class SignupViewController: UIViewController {
         //button.setupLeftImage(imageName:"first")
         /*button.setLeftView(image: UIImage.init(systemName: "first")!)*/
         //button.setLeftView(image: (UIImage(systemName: "first") ?? UIImage(systemName: "first"))!)
+        return button
+    }()
+    
+    private let studentEmpCodeTextFiled: UITextField = {
+        
+        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
+        let image = UIImage(systemName: "pencil.circle")
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        //imageView.backgroundColor = UIColor.red
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
+        view.addSubview(imageView)
+        
+        let button = UITextField()
+        button.placeholder = "Student Index / Emp Code"
+        button.font = UIFont.boldSystemFont(ofSize: 20)
+        button.backgroundColor = UIColor.systemGray
+        button.leftViewMode = .always
+        button.leftView = view
+       
         return button
     }()
     
@@ -231,8 +213,12 @@ class SignupViewController: UIViewController {
             guard let controller = keyWindow?.rootViewController as? FirstViewController else { return }
             //controller.configure()
              */
-            
+            /*self.navigationController?.popViewController(animated: true)*/
             self.dismiss(animated: true, completion: nil)
+            
+            
+                   let vc = FirstViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -243,7 +229,7 @@ class SignupViewController: UIViewController {
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [/*emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton*/ fullNameTextFiled,addressTextFiled,emailTextFiled,passwordTextFiled,
+        let stack = UIStackView(arrangedSubviews: [/*emailContainerView, fullNameContainerView, passwordContainerView, accountTypeContainerView, signUpButton*/ fullNameTextFiled,addressTextFiled,emailTextFiled,passwordTextFiled,studentEmpCodeTextFiled,
         accountTypeSegmentedControl,signUpButton])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
@@ -267,6 +253,7 @@ class SignupViewController: UIViewController {
         let roleType = accountTypeSegmentedControl.selectedSegmentIndex
         
         let address = addressTextFiled.text
+        let userIndexCode = studentEmpCodeTextFiled.text
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
@@ -276,14 +263,36 @@ class SignupViewController: UIViewController {
             
             guard let userId = result?.user.uid else { return }
             
+            let formatter = DateFormatter()
+                      // initially set the format based on your datepicker date / server String
+                      formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+                      let myString = formatter.string(from: Date()) // string purpose I add here
+                      // convert your string to date
+                      let yourDate = formatter.date(from: myString)
+                      //then again set the date format whhich type of output you need
+                      formatter.dateFormat = "dd-MMM-yyyy"
+                      // again convert your date to string
+                      let myStringafd = formatter.string(from: yourDate!)
+            
             let userObj = [
-            "userEmail": email,
+            "uid": userId,
+            "userEmail": email.lowercased(),
             "userFullName": fullName,
             "roleType": roleType,
-            "address": address
-            ] as [String : Any]
+            "address": address,
+            "userIndexCode": userIndexCode,
+            "keyValue": fullName + myStringafd,
+            "createdDate": myStringafd
+                ] as [String : Any]
             
-            if roleType == 1 {
+            
+            /*REF_USERS.child(userIndexCode!).updateChildValues(userObj) { (error, ref) in
+               
+               
+            }*/
+            
+            /* if roleType == 1 {
                 let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
                 
                 guard let location = self.location else { return }
@@ -291,9 +300,11 @@ class SignupViewController: UIViewController {
                 geoFire.setLocation(location, forKey: userId, withCompletionBlock: { (error) in
                     self.uploadUserDataAndShowHomeController(userId: userId, userObj: userObj)
                 })
-            }
+            }*/
             
-            self.uploadUserDataAndShowHomeController(userId: userId, userObj: userObj)
+          
+
+            self.uploadUserDataAndShowHomeController(userId: String(email.lowercased().split(separator: "@")[0]), userObj: userObj)
         }
     }
     
@@ -301,3 +312,4 @@ class SignupViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
+
