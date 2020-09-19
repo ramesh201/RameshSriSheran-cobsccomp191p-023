@@ -47,19 +47,35 @@ class NotificationViewController: UIViewController {
         userID = Auth.auth().currentUser?.uid as! String
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
-          let value = snapshot.value as? NSDictionary
-          let roleId = value?["roleType"] as? String ?? ""
-
+          //let value = snapshot.value as? NSDictionary
+          //let roleId = value?["roleType"] as? String ?? ""
+          //guard let roleId = value?["roleType"] as? String else { return }
+            
+            guard let value = snapshot.value as? [String: Any] else { return }
+                       guard let roleType = value["roleType"] as? Int else { return }
+            
+            var latestNotifyKey: String
+            latestNotifyKey = String(uid.lowercased().split(separator: "@")[0])
+            
             let userObj = [
                 "notifiTitle": self.txtTitle.text,
                 "notifiBody": self.txtBody.text,
-            "uid": value?["uid"] as? String ?? "",
-            "userID": String(uid.lowercased().split(separator: "@")[0]),
-            "roleType": roleId,
+            "uid": "",
+            "userID": latestNotifyKey,
+            "roleType": roleType,
             "createdDate": myStringafd
                 ] as [String : Any]
             
-            self.uploadUserNotificationsAndShowHomeController(userId: String(uid.lowercased().split(separator: "@")[0]), userObj: userObj)
+            self.uploadUserNotificationsAndShowHomeController(userId: latestNotifyKey, userObj: userObj)
+            
+
+            let post = ["uid": Constants().latestNotifyKey,
+                        "title": self.txtTitle.text,
+                        "body": self.txtBody.text] as [String : Any]
+            let childUpdates = ["/latestnotifications/\(Constants().latestNotifyKey)": post
+                                //"/user-posts/\(1200)/\(key)/": post
+            ]
+            DB_REF.updateChildValues(childUpdates)
             
           }) { (error) in
             print(error.localizedDescription)

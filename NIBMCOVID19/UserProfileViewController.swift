@@ -43,7 +43,8 @@ class UserProfileViewController: UIViewController {
         
         imgUser.image =  imageView.af_se(with: URL(string: urlStr as! String), placeholderImage: UIImage(named: "placeholder.png"))
         */
-        let urlStr = "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202009101814"
+        
+        /*let urlStr = "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?202009101814"
         getImageFromWeb(urlStr as! String) { (image) in
             if let image = image {
                 let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
@@ -52,7 +53,7 @@ class UserProfileViewController: UIViewController {
                 //self.view.addSubview(imageView)
                 //self.scrollView.addSubview(imageView)
             } // if you use an Else statement, it will be in background
-        }
+        }*/
         
         var uid = String((currUser?.email!.lowercased().split(separator: "@")[0])!)
         
@@ -65,10 +66,11 @@ class UserProfileViewController: UIViewController {
             guard let address = value["address"] as? String else { return }
             guard let indexCode = value["userIndexCode"] as? String else { return }
             guard let role = value["roleType"] as? Int else { return }
+            guard let userImage = value["userImage"] as? String else { return }
             //roleId = role
             
             let fName = fullName.split(separator: " ")[0]
-            let lName = fullName.split(separator: " ").count == 2 ?  fullName.split(separator: " ")[1] : "-"
+            let lName = fullName.split(separator: " ").count > 1 ?  fullName.split(separator: " ")[1] : "-"
             
             var username2 = value as? String ?? ""
            
@@ -80,6 +82,17 @@ class UserProfileViewController: UIViewController {
             self.lblAddress.text = String(address)
             self.lblIndexCode.text = String(indexCode)
             
+            self.getImageFromWeb(String(userImage)) { (image) in
+                if let image = image {
+                    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
+                    //imageView.image = image
+                    self.imgUser.image = image
+                    //self.view.addSubview(imageView)
+                    //self.scrollView.addSubview(imageView)
+                } // if you use an Else statement, it will be in background
+            }
+            
+            //self.imgUser =
             self.roleId = role
             
             var roleName: String = ""

@@ -25,7 +25,7 @@ class  NotificationList{
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let db = Firestore.firestore()
-    let latestNotifyKey = "NIBMLatestNotifyObj"
+    
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet weak var tblNotification: UITableView!
     @IBOutlet var lblUserName: UILabel!
@@ -61,10 +61,10 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var lblSubtitleNoti: UILabel!
     @IBAction func btnCreateLatestNotify(_ sender: UIButton) {
         
-        let post = ["uid": latestNotifyKey,
+        let post = ["uid": Constants().latestNotifyKey,
                     "title": "NIBM Closed",
                     "body": "Keep in touch to get our latest NEWS updates"] as [String : Any]
-        let childUpdates = ["/latestnotifications/\(latestNotifyKey)": post
+        let childUpdates = ["/latestnotifications/\(Constants().latestNotifyKey)": post
                             //"/user-posts/\(1200)/\(key)/": post
         ]
         DB_REF.updateChildValues(childUpdates)
@@ -73,9 +73,9 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let notification2 = NotificationList(notificationTitle: self.notificationDetails, notificationSubtitle: "Visit your profile")
+        /*let notification2 = NotificationList(notificationTitle: self.notificationDetails, notificationSubtitle: "Visit your profile")
         
-        self.notificationArray.append(notification2)
+        self.notificationArray.append(notification2)*/
         
     }
 
@@ -92,11 +92,11 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         ref = Database.database().reference()
         //FirebaseApp.configure()
-        print("ref ok")
+        //print("ref ok")
         /*ref.child("users").child("1600").setValue(["username": "username 005"])
         ref.child("users").child("1601").setValue(["username": "username 006"])
 */
-        
+        /*
         guard let key = ref.child("roles").childByAutoId().key else { return }
         let userRole = ["uid": 2000,
                     "roleId": 1,
@@ -124,6 +124,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         }) { (error) in
             print(error.localizedDescription)
         }
+        */
         
        /* FirebaseDatabase.database().ref("users/" + 1500).set({
             username : "name",
@@ -133,22 +134,24 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         */
         
         //guard let userId = result?.user.uid else { return }
-        
+       
+        /*
         let userObj = [
         "userEmail": "emailvghjgvhj",
         "userFullName": "fullName",
         "roleType": 1,
         "address": "address",
-        "userIndexCode": "userIndexCode"
+        "userIndexCode": "userIndexCode",
+        "userImage": Constants().userImage
         ] as [String : Any]
         
          childUpdates = [
         "/users/\(1600)/": userRole]
+        */
         
         
         
-        
-        ref.child("user-roles").child("1500").observeSingleEvent(of: .value, with: { (snapshot) in
+       /* ref.child("user-roles").child("1500").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
           let value = snapshot.value as? NSDictionary
             var username = "user 01"
@@ -164,12 +167,12 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             
         }) { (error) in
             print(error.localizedDescription)
-        }
+        }*/
         
         var x = ref.child("roles")
         var y = ref.child("user-roles/\("1500")/roleId").setValue(2)
         
-        ref.child("user-roles/\("1500")").observeSingleEvent(of: .value, with: { (snapshot) in
+        /*ref.child("user-roles/\("1500")").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
           let value = snapshot.value as? NSDictionary
             let username = ""
@@ -185,7 +188,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             
         }) { (error) in
             print(error.localizedDescription)
-        }
+        }*/
         
         let uid = "mac" //Auth.auth().currentUser!.isAnonymous ?; return : String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)  //"mac"
         
@@ -202,7 +205,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
                   let myStringafd = formatter.string(from: yourDate!)
         
         
-        ref.child("latestnotifications/\(latestNotifyKey)").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("latestnotifications/\(Constants().latestNotifyKey)").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
           let value = snapshot.value as? NSDictionary
             //let username = ""
@@ -260,7 +263,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
                             //"/user-posts/\(1200)/\(key)/": post
         ]
         ref.updateChildValues(childUpdates)*/
-        print("update ok")
+        //print("update ok")
 
         /*Auth.auth().signIn(withEmail: "gametrainer2013@gmail.com", password: "iosapp") { [weak self] authResult, error in
           guard let strongSelf = self else { return }

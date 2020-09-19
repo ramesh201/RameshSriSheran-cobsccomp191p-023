@@ -108,7 +108,7 @@ image: UIImage(systemName: "first")!)
     private let passwordField: UITextField = {
         
         let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24, height: 24))
-        let image = UIImage(systemName: "first")
+        let image = UIImage(systemName: "pencil.circle")
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
         //imageView.backgroundColor = UIColor.red
@@ -120,6 +120,7 @@ image: UIImage(systemName: "first")!)
         button.placeholder = "Password"
         button.font = UIFont.boldSystemFont(ofSize: 20)
         button.isSecureTextEntry = true
+        button.backgroundColor = UIColor.systemGray
         return button
     }()
     private let loginButton: AuthButtonUIButton = {

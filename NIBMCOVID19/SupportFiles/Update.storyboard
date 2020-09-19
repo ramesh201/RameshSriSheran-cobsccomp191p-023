@@ -255,6 +255,9 @@
                     <connections>
                         <outlet property="lblCNotifi" destination="5Yg-Ke-3nj" id="Fjq-To-G3S"/>
                         <outlet property="lblGoCNotifi" destination="Fz5-3s-El8" id="OWy-rp-w6L"/>
+                        <outlet property="lblTemperature" destination="kWQ-jF-G43" id="0Dc-Fy-Ype"/>
+                        <outlet property="lblTemperatureLastUpdate" destination="kkb-pg-U1D" id="Apg-y6-qIp"/>
+                        <outlet property="txtTemperature" destination="bhD-Hi-cfP" id="HnX-Kd-IqH"/>
                         <segue destination="Lrn-up-lDn" kind="presentation" identifier="showAuthentication" modalPresentationStyle="fullScreen" id="dVy-Un-dv5"/>
                     </connections>
                 </viewController>

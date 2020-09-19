@@ -20,12 +20,55 @@ class  UpdateScrnProcList{
 }
 
 class UpdateViewController: UIViewController {
-
+let currUser = Auth.auth().currentUser
     //@IBOutlet weak var lblTitle: UILabel!
+    var latestTempUId = ""
+    
     @IBOutlet weak var lblCNotifi: UILabel!
     @IBOutlet weak var lblGoCNotifi: UIButton!
     var updateArray = [UpdateScrnProcList]()
+    @IBOutlet weak var lblTemperature: UILabel!
+    @IBOutlet weak var lblTemperatureLastUpdate: UILabel!
+    @IBOutlet weak var txtTemperature: UITextField!
     @IBAction func btnUpdateTemp(_ sender: UIButton) {
+        
+      latestTempUId  = String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)
+        
+        
+                  let formatter = DateFormatter()
+                  formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+                  let myString = formatter.string(from: Date())
+                  let yourDate = formatter.date(from: myString)
+                  
+                  formatter.dateFormat = "dd-MMM-yyyy"
+                  let myStringafd = formatter.string(from: yourDate!)
+        
+        
+        let post = ["uid": latestTempUId,
+                    "temperature": txtTemperature.text,
+                    "createdDate": myStringafd] as [String : Any]
+        let childUpdates = ["/userTemperature/\(latestTempUId)": post
+                            //"/user-posts/\(1200)/\(key)/": post
+        ]
+        DB_REF.updateChildValues(childUpdates)
+        
+        updateUserTemperature(latestTempUId: latestTempUId)
+        
+        /*DB_REF.child("userTemperature/\(latestTempUId)").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+            guard let value = snapshot.value as? [String: Any] else { return }
+            guard let temperature = value["temperature"] as? String else { return }
+            guard let updatedDate = value["createdDate"] as? String else { return }
+            //let username = ""
+            //var username2 = value as? String ?? ""
+            
+            self.lblTemperature.text = temperature
+            self.lblTemperatureLastUpdate.text = self.lblTemperatureLastUpdate.text!.appending((" "+updatedDate))
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }*/
         
         
         
@@ -36,9 +79,74 @@ class UpdateViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         print("Update")
+        if(Auth.auth().currentUser?.isAnonymous != nil){
+            latestTempUId  = String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)
+            
+            updateUserTemperature(latestTempUId: latestTempUId)
+        
+        DB_REF.child("users/\(latestTempUId)").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+            guard let value = snapshot.value as? [String: Any] else { return }
+            guard let roleType = value["roleType"] as? Int else { return }
+            
+            if(roleType == 0){
+                self.lblCNotifi.isHidden = true
+                self.lblGoCNotifi.isHidden = true
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+            
+        }
+        
+        
+        
+        
     }
+    
+    func updateUserTemperature(latestTempUId: String) {
+        
+        DB_REF.child("userTemperature/\(latestTempUId)").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+            guard let value = snapshot.value as? [String: Any] else { return }
+            guard let temperature = value["temperature"] as? String else { return }
+            guard let updatedDate = value["createdDate"] as? String else { return }
+            //let username = ""
+            //var username2 = value as? String ?? ""
+            
+            self.lblTemperature.text = temperature
+            self.lblTemperatureLastUpdate.text = "Last Update: " + updatedDate
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         print("Update")
+        if(Auth.auth().currentUser?.isAnonymous != nil){
+            latestTempUId  = String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)
+            
+            updateUserTemperature(latestTempUId: latestTempUId)
+        
+        DB_REF.child("users/\(latestTempUId)").observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+            guard let value = snapshot.value as? [String: Any] else { return }
+            guard let roleType = value["roleType"] as? Int else { return }
+            
+            if(roleType == 0){
+                self.lblCNotifi.isHidden = true
+                self.lblGoCNotifi.isHidden = true
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+            
+        }
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         _ = Auth.auth().addStateDidChangeListener { (auth, user) in

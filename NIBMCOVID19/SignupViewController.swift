@@ -283,7 +283,8 @@ class SignupViewController: UIViewController {
             "address": address,
             "userIndexCode": userIndexCode,
             "keyValue": fullName + myStringafd,
-            "createdDate": myStringafd
+            "createdDate": myStringafd,
+            "userImage": Constants().userImage
                 ] as [String : Any]
             
             
