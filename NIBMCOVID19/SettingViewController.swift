@@ -81,19 +81,17 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if (currUser?.isAnonymous != nil){
             
-                if indexPath.row == 0 || indexPath.row == 4 {
+                if indexPath.row == 0  {
                     return 0
                 }
                 else{
                     return 73
                 }
             
-            
-            
         }
         else{
             
-                 if indexPath.row == 3 {
+                 if indexPath.row == 3 || indexPath.row == 4{
                                return 0
                            }
                  else{

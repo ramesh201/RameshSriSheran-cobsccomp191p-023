@@ -55,6 +55,10 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     var isLoggedin = Bool()
     
     
+  
+    @IBOutlet weak var lblTitleNotifi: UILabel!
+    @IBOutlet weak var lblSubtitleNoti: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         
         let notification2 = NotificationList(notificationTitle: self.notificationDetails, notificationSubtitle: "Visit your profile")
@@ -197,8 +201,15 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             //print(username)
             self.txtUsername?.text = self.txtUsername?.text?.appending(value?["notifiTitle"] as? String ?? "").appending(value?["notifiBody"] as? String ?? "") //username
             //self.notificationDetails = username
+            let title  = value?["notifiTitle"]! // as? String ?? ""
+            let subTitle  = value?["notifiBody"]!
+
+            //let tempVal = value?.value(forKeyPath: "notifiTitle")
+            guard let titleNotify = title as? String else { return }
+            guard let subTitleNotify = subTitle as? String else { return }
             
-            //print(self.isLoggedin)
+            self.lblTitleNotifi?.text = title as! String //titleNotify
+            self.lblSubtitleNoti?.text = subTitle as! String
             
         }) { (error) in
             print(error.localizedDescription)
@@ -288,7 +299,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

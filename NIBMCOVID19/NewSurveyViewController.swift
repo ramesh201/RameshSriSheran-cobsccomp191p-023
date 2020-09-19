@@ -13,12 +13,13 @@ class NewSurveyViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var movies: [String] = ["Hand_washing_v2.jpg","second","first"]
+    var movies: [String] = [ "coronaSurvey1.jpg","coronaSurvey2.png","coronaSurvey3.jpg","coronaSurvey4.jpg"]
+
     var frame = CGRect.zero
     
     let imagelist = ["img1.jpg", "photo1.jpg", "photo3.jpg", "photo4.jpg", "photo5.jpg"]
     
-    var sliderImagesArray = NSMutableArray()
+    //var sliderImagesArray = NSMutableArray()
     
        //var scrollView = UIScrollView()
 
@@ -40,11 +41,12 @@ print("new survey")
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sliderImagesArray = ["https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080","https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080", "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080"]
+        /*sliderImagesArray = ["https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080","https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080", "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080"]
+ */
             scrollView.delegate = self
-        for i in 0..<sliderImagesArray.count {
-                var imageView : UIImageView
-                let xOrigin = self.scrollView.frame.size.width * CGFloat(i)
+        //for i in 0..<movies.count {
+                //var imageView : UIImageView
+                //let xOrigin = self.scrollView.frame.size.width * CGFloat(i)
                 
             
             
@@ -93,16 +95,16 @@ print("new survey")
             }
             */
             
-            }
+            //}
             self.scrollView.isPagingEnabled = true
             self.scrollView.bounces = false
             self.scrollView.showsVerticalScrollIndicator = false
             self.scrollView.showsHorizontalScrollIndicator = false
             self.scrollView.contentSize = CGSize(width:
-            self.scrollView.frame.size.width * CGFloat(sliderImagesArray.count), height: self.scrollView.frame.size.height)
+            self.scrollView.frame.size.width * CGFloat(movies.count), height: self.scrollView.frame.size.height)
         pageControl.addTarget(self, action: #selector(self.changePage(sender:)), for: UIControl.Event.valueChanged)
 
-            self.pageControl.numberOfPages = sliderImagesArray.count
+            self.pageControl.numberOfPages = movies.count
             self.pageControl.currentPage = 0
             self.pageControl.tintColor = UIColor.red
             self.pageControl.pageIndicatorTintColor = UIColor.black

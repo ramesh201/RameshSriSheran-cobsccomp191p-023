@@ -16,6 +16,9 @@ class SecondViewController: UIViewController {
         
     }
 
-
+    override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+      }
+    
 }
 

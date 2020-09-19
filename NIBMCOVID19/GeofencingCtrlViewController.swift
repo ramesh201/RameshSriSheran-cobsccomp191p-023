@@ -264,4 +264,7 @@ extension GeofencingCtrlViewController : CLLocationManagerDelegate {
 
     }*/
 
+      override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+      }
 }

@@ -267,6 +267,11 @@ image: UIImage(systemName: "first")!)
                  }
              }
         }*/
+    
+      override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+      }
+    
     }
     
 

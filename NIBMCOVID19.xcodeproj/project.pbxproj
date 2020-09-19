@@ -27,6 +27,10 @@
 		102C78AC2512468C007B55C4 /* demo1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102C78AB2512468C007B55C4 /* demo1.storyboard */; };
 		102C78AE2512469F007B55C4 /* demo2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102C78AD2512469F007B55C4 /* demo2.storyboard */; };
 		102C78B02512472A007B55C4 /* Demo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102C78AF2512472A007B55C4 /* Demo1ViewController.swift */; };
+		105424342515D9FA0032FF9F /* coronaSurvey4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 105424302515D9F80032FF9F /* coronaSurvey4.jpg */; };
+		105424352515D9FA0032FF9F /* coronaSurvey3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 105424312515D9F90032FF9F /* coronaSurvey3.jpg */; };
+		105424362515D9FA0032FF9F /* coronaSurvey2.png in Resources */ = {isa = PBXBuildFile; fileRef = 105424322515D9F90032FF9F /* coronaSurvey2.png */; };
+		105424372515D9FA0032FF9F /* coronaSurvey1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 105424332515D9FA0032FF9F /* coronaSurvey1.jpg */; };
 		1070D710250DB85C009B04AD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D70F250DB85B009B04AD /* NotificationViewController.swift */; };
 		1070D716250DBC2A009B04AD /* NewSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D715250DBC2A009B04AD /* NewSurvey.storyboard */; };
 		1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */; };
@@ -69,6 +73,7 @@
 		1083823724F27BB900B6E89D /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823624F27BB900B6E89D /* UserRole.swift */; };
 		1083823924F27BF300B6E89D /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823824F27BF300B6E89D /* UserDetail.swift */; };
 		1083823B24F27C0400B6E89D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1083823A24F27C0400B6E89D /* Notification.swift */; };
+		10B5A4AE2514FBC700A8A056 /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5A4AD2514FBC700A8A056 /* NotificationListViewController.swift */; };
 		10C90DDB24ED77D900B2FB43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C90DDA24ED77D900B2FB43 /* AppDelegate.swift */; };
 		10C90DDD24ED77D900B2FB43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C90DDC24ED77D900B2FB43 /* SceneDelegate.swift */; };
 		10C90DDF24ED77D900B2FB43 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C90DDE24ED77D900B2FB43 /* FirstViewController.swift */; };
@@ -122,6 +127,10 @@
 		102C78AB2512468C007B55C4 /* demo1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = demo1.storyboard; sourceTree = "<group>"; };
 		102C78AD2512469F007B55C4 /* demo2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = demo2.storyboard; sourceTree = "<group>"; };
 		102C78AF2512472A007B55C4 /* Demo1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1ViewController.swift; sourceTree = "<group>"; };
+		105424302515D9F80032FF9F /* coronaSurvey4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coronaSurvey4.jpg; sourceTree = "<group>"; };
+		105424312515D9F90032FF9F /* coronaSurvey3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coronaSurvey3.jpg; sourceTree = "<group>"; };
+		105424322515D9F90032FF9F /* coronaSurvey2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coronaSurvey2.png; sourceTree = "<group>"; };
+		105424332515D9FA0032FF9F /* coronaSurvey1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coronaSurvey1.jpg; sourceTree = "<group>"; };
 		1070D70F250DB85B009B04AD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1070D715250DBC2A009B04AD /* NewSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewSurvey.storyboard; sourceTree = "<group>"; };
 		1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSurveyViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +173,7 @@
 		1083823624F27BB900B6E89D /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		1083823824F27BF300B6E89D /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		1083823A24F27C0400B6E89D /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		10B5A4AD2514FBC700A8A056 /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
 		10C90DD724ED77D900B2FB43 /* NIBMCOVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBMCOVID19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C90DDA24ED77D900B2FB43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C90DDC24ED77D900B2FB43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +248,10 @@
 		108381CA24ED90E100B6E89D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				105424332515D9FA0032FF9F /* coronaSurvey1.jpg */,
+				105424322515D9F90032FF9F /* coronaSurvey2.png */,
+				105424312515D9F90032FF9F /* coronaSurvey3.jpg */,
+				105424302515D9F80032FF9F /* coronaSurvey4.jpg */,
 				101F3ED8250E81FA00B8B9B5 /* avoidcrowded.jpg */,
 				101F3ED1250E7F5F00B8B9B5 /* fightcorona.jpg */,
 				101F3ECF250E7F5E00B8B9B5 /* Handwashing.jpg */,
@@ -367,6 +381,7 @@
 				1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */,
 				1070D71D250DE026009B04AD /* SafeActionViewController.swift */,
 				102C78AF2512472A007B55C4 /* Demo1ViewController.swift */,
+				10B5A4AD2514FBC700A8A056 /* NotificationListViewController.swift */,
 			);
 			path = NIBMCOVID19;
 			sourceTree = "<group>";
@@ -531,12 +546,14 @@
 				1083821424F163D400B6E89D /* UpdateAuthentication.storyboard in Resources */,
 				108381D524EED33400B6E89D /* Home.storyboard in Resources */,
 				1083822C24F2446A00B6E89D /* ShareAppItem.storyboard in Resources */,
+				105424372515D9FA0032FF9F /* coronaSurvey1.jpg in Resources */,
 				108381D924EED35900B6E89D /* Setting.storyboard in Resources */,
 				1083820224F0D7C200B6E89D /* Signup.storyboard in Resources */,
 				1083821624F1DAF000B6E89D /* AuthenticationSignin.storyboard in Resources */,
 				10C90DEC24ED77D900B2FB43 /* LaunchScreen.storyboard in Resources */,
 				102C78AE2512469F007B55C4 /* demo2.storyboard in Resources */,
 				1083821A24F2340F00B6E89D /* ShareApp.storyboard in Resources */,
+				105424352515D9FA0032FF9F /* coronaSurvey3.jpg in Resources */,
 				101F3ED6250E7F5F00B8B9B5 /* wearmask.jpg in Resources */,
 				101F3ED9250E81FA00B8B9B5 /* avoidcrowded.jpg in Resources */,
 				1083820A24F113FC00B6E89D /* SignUpView.storyboard in Resources */,
@@ -550,10 +567,12 @@
 				101F3ED7250E7F5F00B8B9B5 /* fightcorona.jpg in Resources */,
 				10C90DE924ED77D900B2FB43 /* Assets.xcassets in Resources */,
 				1083820424F0D7D900B6E89D /* LoginView.storyboard in Resources */,
+				105424342515D9FA0032FF9F /* coronaSurvey4.jpg in Resources */,
 				1083821E24F234EE00B6E89D /* UserProfile.storyboard in Resources */,
 				1083821824F2334600B6E89D /* ContactUs.storyboard in Resources */,
 				102C78AC2512468C007B55C4 /* demo1.storyboard in Resources */,
 				1083823224F253EB00B6E89D /* GeofencingView.storyboard in Resources */,
+				105424362515D9FA0032FF9F /* coronaSurvey2.png in Resources */,
 				1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +710,7 @@
 				1083822224F239FE00B6E89D /* ShareAppViewController.swift in Sources */,
 				101F3EDE250F7E7600B8B9B5 /* Constants.swift in Sources */,
 				101F3EE2250F854700B8B9B5 /* Artwork.swift in Sources */,
+				10B5A4AE2514FBC700A8A056 /* NotificationListViewController.swift in Sources */,
 				10C90DDF24ED77D900B2FB43 /* FirstViewController.swift in Sources */,
 				1083823524F27BA100B6E89D /* UserLocation.swift in Sources */,
 				101A788124F359510080845F /* GeofencingCtrlViewController.swift in Sources */,

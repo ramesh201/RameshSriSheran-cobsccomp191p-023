@@ -311,5 +311,9 @@ class SignupViewController: UIViewController {
     @objc func handleShowLogIn() {
         navigationController?.popViewController(animated: true)
     }
+    
+      override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+      }
 }
 

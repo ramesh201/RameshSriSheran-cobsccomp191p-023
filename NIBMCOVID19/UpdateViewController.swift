@@ -41,8 +41,8 @@ class UpdateViewController: UIViewController {
              if (auth.currentUser?.isAnonymous != nil){
                 //performSegue(withIdentifier: "showUpdateView", sender: self)
                 print("logged in")
-                self.lblCNotifi.isHidden = true
-                self.lblGoCNotifi.isHidden = false
+                //self.lblCNotifi.isHidden = true
+                //self.lblGoCNotifi.isHidden = false
             }
             else{
                 self.performSegue(withIdentifier: "showAuthentication", sender: self)
@@ -106,4 +106,7 @@ class UpdateViewController: UIViewController {
     }
     */
 
+      override func didReceiveMemoryWarning() {
+          super.didReceiveMemoryWarning()
+      }
 }
