@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
         
-        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleVisibleSignUp), for: .touchUpInside)
         
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
@@ -126,7 +126,7 @@ image: UIImage(systemName: "first")!)
           let button = AuthButtonUIButton(type: .system)
           button.setTitle("Log In", for: .normal)
           button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-          button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+          button.addTarget(self, action: #selector(performSignIn), for: .touchUpInside)
           return button
       }()
       
@@ -147,7 +147,7 @@ image: UIImage(systemName: "first")!)
           
           attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
           
-          button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+          button.addTarget(self, action: #selector(handleVisibleSignUp), for: .touchUpInside)
           
           button.setAttributedTitle(attributedTitle, for: .normal)
           return button
@@ -158,12 +158,12 @@ image: UIImage(systemName: "first")!)
       override func viewDidLoad() {
           super.viewDidLoad()
           
-          configureUI()
+          configureSigninUI()
       }
     
     // MARK: - Selectors
     
-    @objc func handleSignIn() {
+    @objc func performSignIn() {
         guard let email = emailField.text else { return }
         
         guard let password = passwordField.text else { return }
@@ -188,14 +188,14 @@ image: UIImage(systemName: "first")!)
         }
     }
     
-    @objc func handleShowSignUp() {
+    @objc func handleVisibleSignUp() {
         let vc = SignupViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK: - Helper Function
     
-    func configureUI() {
+    func configureSigninUI() {
         
         configureNavigationBar()
         

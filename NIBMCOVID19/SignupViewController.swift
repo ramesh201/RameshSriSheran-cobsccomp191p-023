@@ -171,7 +171,7 @@ class SignupViewController: UIViewController {
         let button = AuthButtonUIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(performSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -181,7 +181,7 @@ class SignupViewController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
         
-        button.addTarget(self, action: #selector(handleShowLogIn), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleVisibleLogIn), for: .touchUpInside)
         
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
@@ -192,7 +192,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureUI()
+        configureSignupUI()
         
     }
     
@@ -222,7 +222,7 @@ class SignupViewController: UIViewController {
         }
     }
     
-    func configureUI() {
+    func configureSignupUI() {
         view.backgroundColor = UIColor.darkGray
         
         view.addSubview(titleLabel)
@@ -246,7 +246,7 @@ class SignupViewController: UIViewController {
     
     // MARK: - Selectors
     
-    @objc func handleSignUp() {
+    @objc func performSignUp() {
         guard let email = emailTextFiled.text else { return }
         guard let password = passwordTextFiled.text else { return }
         guard let fullName = fullNameTextFiled.text else { return }
@@ -308,7 +308,8 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @objc func handleShowLogIn() {
+    
+    @objc func handleVisibleLogIn() {
         navigationController?.popViewController(animated: true)
     }
     

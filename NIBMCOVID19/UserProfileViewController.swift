@@ -27,13 +27,14 @@ class UserProfileViewController: UIViewController {
         }
         super.viewDidLoad()
     }
-    
+    var roleId: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print("user profile")
+        let currUser = Auth.auth().currentUser
         
-       /*var imageView = UIImageView(frame: )
+        /*var imageView = UIImageView(frame: )
         // Do any additional setup after loading the view.
         let urlStr = "sliderImagesArray.object(at: i)"
             //print(scrollView,imageView, urlStr)
@@ -53,7 +54,53 @@ class UserProfileViewController: UIViewController {
             } // if you use an Else statement, it will be in background
         }
         
-       
+        var uid = String((currUser?.email!.lowercased().split(separator: "@")[0])!)
+        
+        
+        REF_USERS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                // Get user value
+            guard let value = snapshot.value as? [String: Any] else { return }
+            guard let fullName = value["userFullName"] as? String else { return }
+            guard let address = value["address"] as? String else { return }
+            guard let indexCode = value["userIndexCode"] as? String else { return }
+            guard let role = value["roleType"] as? Int else { return }
+            //roleId = role
+            
+            let fName = fullName.split(separator: " ")[0]
+            let lName = fullName.split(separator: " ").count == 2 ?  fullName.split(separator: " ")[1] : "-"
+            
+            var username2 = value as? String ?? ""
+           
+            
+                
+            //print(username)
+            self.lblFN.text = String(fName)
+            self.lblLN.text = String(lName)
+            self.lblAddress.text = String(address)
+            self.lblIndexCode.text = String(indexCode)
+            
+            self.roleId = role
+            
+            var roleName: String = ""
+            DB_REF.child("roles").child(String(self.roleId)).observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let value2 = snapshot.value as? [String: Any] else { return }
+                guard let userRole = value2["roleName"] as? String else { return }
+                
+                roleName = userRole
+                self.lblRole.text = String(roleName)
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+        
+        
+        
     }
     
     func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {

@@ -36,6 +36,9 @@
 		1070D71A250DD7AA009B04AD /* NewSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */; };
 		1070D71E250DE026009B04AD /* SafeActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070D71D250DE026009B04AD /* SafeActionViewController.swift */; };
 		1070D728250E09E1009B04AD /* SafeAction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1070D727250E09E1009B04AD /* SafeAction.storyboard */; };
+		107238402515ED40004C3109 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072383F2515ED40004C3109 /* Login.swift */; };
+		107238462515F399004C3109 /* SignupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107238452515F399004C3109 /* SignupTest.swift */; };
+		1072384A2515FAB9004C3109 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107238492515FAB9004C3109 /* Signup.swift */; };
 		108381C124ED89F900B6E89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108381C024ED89F900B6E89D /* Main.storyboard */; };
 		108381CC24ED90FF00B6E89D /* coronavirus_logo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */; };
 		108381D124EEC70900B6E89D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108381D024EEC70900B6E89D /* SettingViewController.swift */; };
@@ -136,6 +139,9 @@
 		1070D719250DD7AA009B04AD /* NewSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSurveyViewController.swift; sourceTree = "<group>"; };
 		1070D71D250DE026009B04AD /* SafeActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionViewController.swift; sourceTree = "<group>"; };
 		1070D727250E09E1009B04AD /* SafeAction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SafeAction.storyboard; sourceTree = "<group>"; };
+		1072383F2515ED40004C3109 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		107238452515F399004C3109 /* SignupTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTest.swift; sourceTree = "<group>"; };
+		107238492515FAB9004C3109 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		108381C024ED89F900B6E89D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		108381CB24ED90FF00B6E89D /* coronavirus_logo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coronavirus_logo-2.jpg"; path = "../../../../Downloads/coronavirus_logo-2.jpg"; sourceTree = "<group>"; };
 		108381D024EEC70900B6E89D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +398,7 @@
 				10C90DF624ED77DA00B2FB43 /* NIBMCOVID19Tests.swift */,
 				10C90DF824ED77DA00B2FB43 /* Info.plist */,
 				101F3EDA250EEAD200B8B9B5 /* LoginUnitTest.swift */,
+				107238452515F399004C3109 /* SignupTest.swift */,
 			);
 			path = NIBMCOVID19Tests;
 			sourceTree = "<group>";
@@ -401,6 +408,8 @@
 			children = (
 				10C90E0124ED77DA00B2FB43 /* NIBMCOVID19UITests.swift */,
 				10C90E0324ED77DA00B2FB43 /* Info.plist */,
+				1072383F2515ED40004C3109 /* Login.swift */,
+				107238492515FAB9004C3109 /* Signup.swift */,
 			);
 			path = NIBMCOVID19UITests;
 			sourceTree = "<group>";
@@ -745,6 +754,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C90DF724ED77DA00B2FB43 /* NIBMCOVID19Tests.swift in Sources */,
+				107238462515F399004C3109 /* SignupTest.swift in Sources */,
 				101F3EDB250EEAD200B8B9B5 /* LoginUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +764,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C90E0224ED77DA00B2FB43 /* NIBMCOVID19UITests.swift in Sources */,
+				107238402515ED40004C3109 /* Login.swift in Sources */,
+				1072384A2515FAB9004C3109 /* Signup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

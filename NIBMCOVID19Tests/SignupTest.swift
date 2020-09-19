@@ -1,45 +1,43 @@
 //
-//  LoginUnitTest.swift
+//  SignupTest.swift
 //  NIBMCOVID19Tests
 //
-//  Created by Ramesh Sheran on 9/14/20.
+//  Created by Ramesh Sheran on 9/19/20.
 //  Copyright © 2020 Ramesh Sheran. All rights reserved.
 //
 
-@testable import NIBMCOVID19
 import XCTest
- 
-class LoginUnitTest: XCTestCase {
+import FirebaseAuth
+import UIKit
+@testable import NIBMCOVID19
 
+class SignupTest: XCTestCase {
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
-        
-        /*
-        if login == "Hello"{
-            print("Cool")
-        }
-        else{
-            print("Not Cool")
-        }
-        */
     }
 
     override func tearDown() {
-        // Put t
         super.tearDown()
     }
     
     
-    func testLogin() throws {
-        let loginVC = LoginViewController()
-        let res = try XCTUnwrap(loginVC.performSignIn())
+    //func testSignup() throws {
+       func testHandleSignup() throws {
+                  let signupVC = SignupViewController()
+            let res = try XCTUnwrap(signupVC.performSignUp())
         
-    }
+        //2(email: "cxvbhcxbg@dxghxd.ty",password: "zsdfgzsfg",fullName: "zdfsgdzfg",roleType: "1",address: "dxfgxdfg",userIndexCode: "dxfgxdfg")
+        }
+        
+    //}
     
-    func testVisibleSignup() throws {
-        let loginVC = LoginViewController()
-        let res = try XCTUnwrap(loginVC.handleVisibleSignUp())
+    func testVisibleSignin() throws {
+           let signupVC = SignupViewController()
+                     let res = try XCTUnwrap(signupVC.handleVisibleLogIn())
+        
+        
         
     }
     
@@ -64,4 +62,5 @@ class LoginUnitTest: XCTestCase {
         }
     }
 
+    
 }
