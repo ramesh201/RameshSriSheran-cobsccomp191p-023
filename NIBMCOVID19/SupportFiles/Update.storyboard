@@ -225,6 +225,9 @@
                                 <state key="normal" title="U P D A T E">
                                     <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnUpdateTemp:" destination="hh2-jT-3El" eventType="touchUpInside" id="MJq-Fc-35I"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWQ-jF-G43">
                                 <rect key="frame" x="155" y="353" width="77" height="29"/>

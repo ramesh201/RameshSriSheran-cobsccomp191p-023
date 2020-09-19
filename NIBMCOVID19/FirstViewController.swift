@@ -25,6 +25,7 @@ class  NotificationList{
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let db = Firestore.firestore()
+    let latestNotifyKey = "NIBMLatestNotifyObj"
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet weak var tblNotification: UITableView!
     @IBOutlet var lblUserName: UILabel!
@@ -43,7 +44,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     @IBAction func btnLogin(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: "gametrainer2013@gmail.com", password: "iosapp") { [weak self] authResult, error in
+        Auth.auth().signIn(withEmail: "mac@book.pro", password: "123456") { [weak self] authResult, error in
           guard let strongSelf = self else { return }
           // ...
         }
@@ -58,6 +59,17 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
   
     @IBOutlet weak var lblTitleNotifi: UILabel!
     @IBOutlet weak var lblSubtitleNoti: UILabel!
+    @IBAction func btnCreateLatestNotify(_ sender: UIButton) {
+        
+        let post = ["uid": latestNotifyKey,
+                    "title": "NIBM Closed",
+                    "body": "Keep in touch to get our latest NEWS updates"] as [String : Any]
+        let childUpdates = ["/latestnotifications/\(latestNotifyKey)": post
+                            //"/user-posts/\(1200)/\(key)/": post
+        ]
+        DB_REF.updateChildValues(childUpdates)
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -175,7 +187,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             print(error.localizedDescription)
         }
         
-        let uid = "mac"// String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)
+        let uid = "mac" //Auth.auth().currentUser!.isAnonymous ?; return : String((Auth.auth().currentUser?.email?.split(separator: "@")[0])!)  //"mac"
         
         let formatter = DateFormatter()
                   // initially set the format based on your datepicker date / server String
@@ -190,7 +202,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
                   let myStringafd = formatter.string(from: yourDate!)
         
         
-        ref.child("notifications/\(uid)").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("latestnotifications/\(latestNotifyKey)").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
           let value = snapshot.value as? NSDictionary
             //let username = ""
@@ -199,10 +211,10 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             //self.presentWinningAlert(title: username)
             //let user = (uid: self.presentWinningAlert(title: username))
             //print(username)
-            self.txtUsername?.text = self.txtUsername?.text?.appending(value?["notifiTitle"] as? String ?? "").appending(value?["notifiBody"] as? String ?? "") //username
+            self.txtUsername?.text = self.txtUsername?.text?.appending(value?["title"] as? String ?? "").appending(value?["body"] as? String ?? "") //username
             //self.notificationDetails = username
-            let title  = value?["notifiTitle"]! // as? String ?? ""
-            let subTitle  = value?["notifiBody"]!
+            let title  = value?["title"]! // as? String ?? ""
+            let subTitle  = value?["body"]!
 
             //let tempVal = value?.value(forKeyPath: "notifiTitle")
             guard let titleNotify = title as? String else { return }

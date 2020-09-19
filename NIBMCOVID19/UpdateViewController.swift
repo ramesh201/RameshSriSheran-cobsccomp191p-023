@@ -25,6 +25,12 @@ class UpdateViewController: UIViewController {
     @IBOutlet weak var lblCNotifi: UILabel!
     @IBOutlet weak var lblGoCNotifi: UIButton!
     var updateArray = [UpdateScrnProcList]()
+    @IBAction func btnUpdateTemp(_ sender: UIButton) {
+        
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

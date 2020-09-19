@@ -42,7 +42,30 @@ class NotificationListViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewDidLoad() {
+        
+        DB_REF.child("notifications").observe(.value) { snapshot in
+                   for child in snapshot.children.allObjects as! [DataSnapshot] {
+                   //print(child.value)
+                   let dict = child.value as? [String : AnyObject] ?? [:]
+                       
+                       //guard let dict2 = child.value as? String else { [:] }
+                       print(dict , " - ",String((dict["notifiTitle"] as? String ?? "")))
+                        let dictVal = ""//dict["notifiTitle"] as? String else { return }
+                       
+                       let userProfile = NotificationListArr(notificationListTitle: String((dict["notifiTitle"] as? String ?? "")), notificationListSubtitle:String((dict["notifiBody"] as? String ?? "")))
+                       
+                       self.notifyArray.append(userProfile)
+                       self.tblNotification.reloadData()
+                       
+                 }
+               }
+        
         super.viewDidLoad()
+        
+        
+       
+        
+      
         
         tblNotification.dataSource = self
         tblNotification.delegate = self
@@ -64,7 +87,7 @@ class NotificationListViewController: UIViewController, UITableViewDataSource, U
         
         cell.lblNotifiSubtitle.text = notifyArray[indexPath.row].NotificationListSubtitle
 
-        
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .black : .darkGray
         
         return cell
     }
@@ -83,7 +106,7 @@ class NotificationListViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
-        return 100
+        return 70
         
     }
     

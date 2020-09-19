@@ -68,6 +68,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidAppear(_ animated: Bool) {
         print("Setting")
+        tblSettingList.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,10 +85,12 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
                 if indexPath.row == 0  {
                     return 0
                 }
-                else{
+                else if indexPath.row == 4 {
                     return 73
                 }
-            
+            else {
+                return 73
+            }
         }
         else{
             
