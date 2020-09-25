@@ -88,15 +88,14 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
                 else if indexPath.row == 4 {
                     return 73
                 }
-            else {
-                return 73
-            }
+                else {
+                    return 73
+                }
         }
         else{
-            
                  if indexPath.row == 3 || indexPath.row == 4{
                                return 0
-                           }
+                }
                  else{
                     return 73
                 }
@@ -149,13 +148,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*var cell = tableView.dequeueReusableCell(withIdentifier: "settingstable2")
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle,reuseIdentifier: "settingstable2")
-            cell?.textLabel?.text = settingArray[indexPath.row].SettingTitle
-            cell?.detailTextLabel?.text = settingArray[indexPath.row].SettingSubtitle
-            
-        }*/
+        
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "settingstable2") as! CustomTableViewCell
         cell.lblTitle.text = settingArray[indexPath.row].SettingTitle
@@ -194,7 +187,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             if let destination = segue.destination as? AuthenticationViewController {
                 
-                print(destination)
+                //print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
                 //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
                 
@@ -206,7 +199,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             if let destination = segue.destination as? ContactUsViewController {
                 
-                print(destination)
+                //print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
                 //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
                 
@@ -218,7 +211,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             if let destination = segue.destination as? ShareAppViewController {
                 
-                print(destination)
+                //print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
                 //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
                 
@@ -230,7 +223,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             if let destination = segue.destination as? SurveyResultViewController {
                 
-                print(destination)
+                //print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
                 //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
                 
@@ -242,7 +235,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             if let destination = segue.destination as? UserProfileViewController {
                 
-                print(destination)
+                //print(destination)
                 /*destination.lblHeader = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!].SettingSubtitle*/
                 //destination.settingObj = settingArray[(tblSettingList.indexPathForSelectedRow?.row)!]
                 

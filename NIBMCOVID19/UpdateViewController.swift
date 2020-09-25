@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import LocalAuthentication
 
 class  UpdateScrnProcList{
     var SettingTitle: String?
@@ -53,7 +54,39 @@ let currUser = Auth.auth().currentUser
         ]
         DB_REF.updateChildValues(childUpdates)
         
-        updateUserTemperature(latestTempUId: latestTempUId)
+        
+        
+          let context = LAContext()
+          var error: NSError?
+
+          if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+              let reason = "Identify yourself!"
+
+              context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                  [weak self] success, authenticationError in
+
+                  DispatchQueue.main.async {
+                      if success {
+                          let ac = UIAlertController(title: "Authentication success", message: "You have got permission to update body temperature", preferredStyle: .alert)
+                          ac.addAction(UIAlertAction(title: "Continue", style: .default))
+                          self?.present(ac, animated: true)
+                        
+                        self!.updateUserTemperature(latestTempUId: self!.latestTempUId)
+                        
+                      } else {
+                          let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
+                          ac.addAction(UIAlertAction(title: "OK", style: .default))
+                          self?.present(ac, animated: true)
+                      }
+                  }
+              }
+          } else {
+              let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+              ac.addAction(UIAlertAction(title: "OK", style: .default))
+              self.present(ac, animated: true)
+          }
+        
+        
         
         /*DB_REF.child("userTemperature/\(latestTempUId)").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
@@ -99,8 +132,6 @@ let currUser = Auth.auth().currentUser
         }
             
         }
-        
-        
         
         
     }
